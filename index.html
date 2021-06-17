@@ -33,7 +33,7 @@
         </div>
 
         <div class="video">
-            <video src="./midia/Estudo 06_06.mp4" type="video/mp4" autoplay="true" height="405"
+            <video src="./midia/Estudo 06_06.mp4" preload="none" controls height="405"
             width= "720">
         </div>
         
@@ -103,7 +103,7 @@
                             <path d="M8.3 7.1732C8.16667 7.09622 8.16667 6.90377 8.3 6.82679L10.7 5.44115C10.8333 5.36417 11 5.4604 11 5.61436L11 8.38564C11 8.5396 10.8333 8.63583 10.7 8.55885L8.3 7.1732Z" fill="white"/>
                             </svg><span>Participantes (1)</span>  
                         </div>
-                        <a href="#" onclick="People.close()">
+                        <a onclick="People.close()">
                             <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z" fill="black"/>
                                 </svg>  
@@ -120,7 +120,7 @@
 
             <nav class="options" id="buttons_options">
                 <ul>
-                    <li><a href=""><svg width="28" height="21" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a><svg width="28" height="21" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.588 11.2369L9.5039 14.6283L8.21826 13.5113L12.8053 8.46735H14.0909L18.6779 13.5113L17.3923 14.6283L14.3081 11.2369V19.6741H12.588V11.2369Z" fill="#20A748"/>
                         <path d="M4.48271 19.6741V11.9549C4.48271 11.9549 2.44845 11.8778 1.12068 13.0577C0.477433 13.6293 0 14.5549 0 15.8145C0 17.0742 0.477433 17.9227 1.12068 18.4943C2.44845 19.6741 4.48271 19.6741 4.48271 19.6741Z" fill="white"/>
                         <path d="M22.4138 11.9539L22.4138 19.673C22.4138 19.673 24.561 19.7502 25.9626 18.5703C26.6416 17.9986 27.1455 17.073 27.1455 15.8134C27.1455 14.5538 26.6416 13.7053 25.9626 13.1337C24.561 11.9538 22.4138 11.9539 22.4138 11.9539Z" fill="white"/>
@@ -128,19 +128,19 @@
                         </svg>
                         </a><p>Conectar Audio</p></li>
 
-                    <li><a href=""><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.893 16.1687V2.47156C27.893 2.47156 24.3728 3.3679 22.0116 5.95489C21.4091 6.61508 21.1689 7.51838 21.1689 8.41977V10.5245C21.1689 11.2333 21.3085 11.9512 21.7298 12.5153C23.7598 15.2332 27.893 16.1687 27.893 16.1687Z" fill="white"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M23 2.2334L4.49994 20.7336L2.90625 19.1399L21.4063 0.639709L23 2.2334Z" fill="#FF5C5C"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.57761 17.1649H17.6671C18.913 17.1649 19.9231 16.1614 19.9231 14.9235V6.88657L9.57761 17.1649ZM18.1002 2.35816C17.3492 1.80355 16.4187 1.4754 15.4111 1.4754H3.00307C1.75712 1.4754 0.74707 2.47889 0.74707 3.71676V12.6822C0.74707 14.552 1.89938 16.1544 3.53696 16.8268L18.1002 2.35816Z" fill="white"/>
                         </svg>                                                
                         </a><p>Iniciar Video</p></li>
 
-                    <li><a href=""><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 0C2.01472 0 0 2.08934 0 4.66667V16.3333C0 18.9107 2.01472 21 4.5 21H22.5C24.9853 21 27 18.9107 27 16.3333V4.66667C27 2.08934 24.9853 0 22.5 0H4.5ZM13.0098 5.83333H13.9883L14.5601 6.44085L18 10.0957L16.6197 11.5624L14.5601 9.37397V16.1143H12.6081V9.37397L10.3803 11.5604L9 10.0938L12.6081 6.26014L13.0098 5.83333Z" fill="#23D959"/>
                         </svg>
                         </a><p>Compartilhar Tela</p></li>
 
-                    <li><a href="#" onclick="People.open()"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a onclick="People.open()"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.4484 4.98078C13.4484 7.73159 11.2184 9.96157 8.4676 9.96157C5.71679 9.96157 3.48682 7.73159 3.48682 4.98078C3.48682 2.22997 5.71679 0 8.4676 0C11.2184 0 13.4484 2.22997 13.4484 4.98078Z" fill="white"/>
                         <path d="M23.6587 7.22212C23.6587 9.42276 21.8747 11.2067 19.6741 11.2067C17.4734 11.2067 15.6895 9.42276 15.6895 7.22212C15.6895 5.02147 17.4734 3.23749 19.6741 3.23749C21.8747 3.23749 23.6587 5.02147 23.6587 7.22212Z" fill="white"/>
                         <path d="M16.9347 16.8102C16.9347 20.1722 15.8057 20.1722 8.46733 20.1722C1.12898 20.1722 0 20.1722 0 16.8102C0 14.025 3.16744 11.2068 8.46733 11.2068C13.7672 11.2068 16.9347 14.025 16.9347 16.8102Z" fill="white"/>
@@ -148,7 +148,7 @@
                         </svg>
                         </a><p>Participantes</p></li>
 
-                    <li><a href=""><svg width="22" height="21" viewBox="0 0 22 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><a><svg width="22" height="21" viewBox="0 0 22 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="2.64502" cy="2.5" r="2.5" fill="white"/>
                         <circle cx="10.645" cy="2.5" r="2.5" fill="white"/>
                         <circle cx="18.645" cy="2.5" r="2.5" fill="white"/>
@@ -178,6 +178,15 @@
         </article> -->
         
     </section>
+
+    <footer class="footer">
+        <h2 class="footer_tittle">Nosso Objetivo</h2>
+        <p class="footer_description">Nosso objetivo é ajudar o maior número de pessoas a usarem do melhor modo possível o aplicativo zoom meetings!</p>
+        <small>Este não é um site oficial do zoom meetings</small>
+
+        <article id="social_media">
+        </article>
+    </footer>
 
     <script src="./script.js"></script>
 </body>
