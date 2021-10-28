@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.2%;
+}
+
+.security {
+    color: #fff;
+    background: #26272a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) ;
+
+    width: 450px;
+    height: 290px;
+
+    padding: 10px 20px;
+    margin: 10px 0;
+
+    border-radius: 7px;
+    position: absolute;
+    z-index: 2;
+}
+
+.meet {
+    display: grid;
+    grid-template-rows: auto;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.name_meet {
+    margin: 5px 0;
+    font-size: 1.6rem;
+}
+
+.content_meet {
+    font-size: 1.4rem;
+
+    display: flex;
+    gap: 70px;
+}
+
+.send_meet {
+    color: #747474;
+}
+
+.send_meet p, .received_meet p {
+    padding: 7px 0;
+}

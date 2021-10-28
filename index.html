@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./computer.css">
     <title>Zoom teste</title>
 </head>
 
@@ -23,20 +25,19 @@
 
         <div class="tittle">
             <h1>Protótipo do Zoom</h1>
-            
+
             <p class="line_description">Teste o protótipo gratuito do zoom.</p>
-                <p class="line_text">Aprenda com lições fáceis a usar o aplicativo #1
+            <p class="line_text">Aprenda com lições fáceis a usar o aplicativo #1
                 em videoconferências do mundo.</p>
 
-                <button class="primary" type="button">Usar o protótipo</button>
+            <button class="primary" type="button">Usar o protótipo</button>
 
         </div>
 
         <div class="video">
-            <video src="./midia/Estudo 06_06.mp4" preload="none" controls height="405"
-            width= "720">
+            <video src="./midia/Estudo 06_06.mp4" preload="none" controls height="405" width="720">
         </div>
-        
+
     </main>
 
     <section id="container">
@@ -52,114 +53,331 @@
                         <p class="p">Computador</p>
                         <svg width="38" height="23" viewBox="0 0 38 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="4.5" width="29" height="17" fill="white" fill-opacity="0.3" />
-                            <path d="M4.56593 17H33.4341L37.5 23H0.5L4.56593 17Z" fill="white" fill-opacity="0.3"/>
-                            </svg>                    
+                            <path d="M4.56593 17H33.4341L37.5 23H0.5L4.56593 17Z" fill="white" fill-opacity="0.3" />
+                        </svg>
                     </div>
 
                     <div class="mobile devices" title="Smartphones e Tablets">
                         <p class="p">Móveis</p>
                         <svg width="48" height="17" viewBox="0 0 48 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="9" height="17" rx="1" fill="white" fill-opacity="0.3"/>
-                            <rect x="19" width="29" height="17" rx="1" fill="white" fill-opacity="0.3"/>
-                            </svg>
-                            
+                            <rect width="9" height="17" rx="1" fill="white" fill-opacity="0.3" />
+                            <rect x="19" width="29" height="17" rx="1" fill="white" fill-opacity="0.3" />
+                        </svg>
+
                     </div>
                 </article>
 
             </section>
         </div>
 
-    <article id="position">
-        <div class="prototipo_computer" onclick=" Bar.open()">
+        <article id="position">
+            <div class="prototipo_computer" onclick=" Bar.open()">
 
-            <div class="header">Protótipo do Zoom </div>
+                <div class="header">Protótipo do Zoom</div>
 
-            <article class="buttons">
-                <a href="#" class="shield"><svg width="15" height="15" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6456 2.33333C11.2145 2.44422 8.83556 1.60734 7.01286 0C5.19016 1.60734 2.81124 2.44422 0.380125 2.33333C0.0261771 3.53346 -0.0821243 4.79225 0.0616566 6.03492C0.205438 7.27759 0.598367 8.47877 1.2171 9.56708C1.83582 10.6554 2.66772 11.6086 3.66336 12.3702C4.659 13.1317 5.79807 13.6859 7.01286 14C8.22766 13.6859 9.36672 13.1317 10.3624 12.3702C11.358 11.6086 12.1899 10.6554 12.8086 9.56708C13.4274 8.47877 13.8203 7.27759 13.9641 6.03492C14.1078 4.79225 13.9995 3.53346 13.6456 2.33333ZM9.90573 5.99438C10.2105 5.69063 10.2105 5.19817 9.90573 4.89443C9.60099 4.59069 9.10692 4.59069 8.80219 4.89443L6.23267 7.45557L5.2238 6.44999C4.91906 6.14625 4.42499 6.14625 4.12025 6.44999C3.81552 6.75373 3.81552 7.24619 4.12025 7.54993L5.6809 9.10549C5.98563 9.40923 6.4797 9.40923 6.78444 9.10549L9.90573 5.99438Z" fill="#23D959"/>
-                    </svg>
-                    </a>
-                <a href="#" class="view"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="1.5" cy="1.5" r="1.5" fill="white"/>
-                    <circle cx="1.5" cy="5.5" r="1.5" fill="white"/>
-                    <circle cx="1.5" cy="9.5" r="1.5" fill="white"/>
-                    <circle cx="5.5" cy="1.5" r="1.5" fill="white"/>
-                    <circle cx="5.5" cy="5.5" r="1.5" fill="white"/>
-                    <circle cx="5.5" cy="9.5" r="1.5" fill="white"/>
-                    <circle cx="9.5" cy="1.5" r="1.5" fill="white"/>
-                    <circle cx="9.5" cy="5.5" r="1.5" fill="white"/>
-                    <circle cx="9.5" cy="9.5" r="1.5" fill="white"/>
-                    </svg> View
-                    </a>
-            </article>
+                <article class="buttons">
+                    <!-- Shield -->
+                    <div class="shield_security">
+                        <a class="shield"><svg width="15" height="15" viewBox="0 0 15 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.6456 2.33333C11.2145 2.44422 8.83556 1.60734 7.01286 0C5.19016 1.60734 2.81124 2.44422 0.380125 2.33333C0.0261771 3.53346 -0.0821243 4.79225 0.0616566 6.03492C0.205438 7.27759 0.598367 8.47877 1.2171 9.56708C1.83582 10.6554 2.66772 11.6086 3.66336 12.3702C4.659 13.1317 5.79807 13.6859 7.01286 14C8.22766 13.6859 9.36672 13.1317 10.3624 12.3702C11.358 11.6086 12.1899 10.6554 12.8086 9.56708C13.4274 8.47877 13.8203 7.27759 13.9641 6.03492C14.1078 4.79225 13.9995 3.53346 13.6456 2.33333ZM9.90573 5.99438C10.2105 5.69063 10.2105 5.19817 9.90573 4.89443C9.60099 4.59069 9.10692 4.59069 8.80219 4.89443L6.23267 7.45557L5.2238 6.44999C4.91906 6.14625 4.42499 6.14625 4.12025 6.44999C3.81552 6.75373 3.81552 7.24619 4.12025 7.54993L5.6809 9.10549C5.98563 9.40923 6.4797 9.40923 6.78444 9.10549L9.90573 5.99438Z"
+                                    fill="#23D959" />
+                            </svg>
+                        </a>
+                    
+                        <div class="meet security">
+                            <div class="name_meet">
+                                <h3>Reunião de Sávio André</h3>
+                            </div>
 
-            <article class="content">
-                <article class="participants">
-                    <div class="header_name">
-                        <div class="tittle_name">
-                        <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="14" height="14" rx="3" fill="#3E87FC"/>
-                            <rect x="3" y="5" width="6" height="4" rx="0.5" fill="white"/>
-                            <path d="M8.3 7.1732C8.16667 7.09622 8.16667 6.90377 8.3 6.82679L10.7 5.44115C10.8333 5.36417 11 5.4604 11 5.61436L11 8.38564C11 8.5396 10.8333 8.63583 10.7 8.55885L8.3 7.1732Z" fill="white"/>
-                            </svg><span>Participantes (1)</span>  
+                            <div class="content_meet">
+                                <div class="send_meet">
+                                    <p class="id_meet">ID da reunião</p>
+                                    <p class="host_meet">Anfitrião</p>
+                                    <p class="pass_meet">Senha</p>
+                                    <p class="invite_meet">Link convite</p>
+                                    <p class="participant_meet">Participante ID</p>
+                                    <p class="security_meet">Encriptação</p>
+                                </div>
+                                <div class="received_meet">
+                                    <p class="id_meet">845 963 4012</p>
+                                    <p class="host_meet">(Você)</p>
+                                    <p class="pass_meet">123</p>
+                                    <p class="invite_meet">Copy link</p>
+                                    <p class="participant_meet">471856</p>
+                                    <p class="security_meet">Habilitado</p>
+                                </div>
+                            </div>
+
+                            <div class="note">
+                                <p>Você está conectado ao site do protótipo do zoom. Este ID e senhas são fictícios</p>
+                            </div>
                         </div>
-                        <a onclick="People.close()">
-                            <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z" fill="black"/>
-                                </svg>  
-                        </a>                                    
                     </div>
-        
-                    <div class="conteiner_name">
-                        <p class="logo_name">MN</p>
-                        <p class="name" id="name">Meu Nome</p>
-                    </div>
-        
+                    <!-- Shield -->
+
+                    <a href="#" class="view"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="white" />
+                            <circle cx="1.5" cy="5.5" r="1.5" fill="white" />
+                            <circle cx="1.5" cy="9.5" r="1.5" fill="white" />
+                            <circle cx="5.5" cy="1.5" r="1.5" fill="white" />
+                            <circle cx="5.5" cy="5.5" r="1.5" fill="white" />
+                            <circle cx="5.5" cy="9.5" r="1.5" fill="white" />
+                            <circle cx="9.5" cy="1.5" r="1.5" fill="white" />
+                            <circle cx="9.5" cy="5.5" r="1.5" fill="white" />
+                            <circle cx="9.5" cy="9.5" r="1.5" fill="white" />
+                        </svg> View
+                    </a>
                 </article>
-            </article>
 
-            <nav class="options" id="buttons_options">
-                <ul>
-                    <li><a><svg width="28" height="21" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.588 11.2369L9.5039 14.6283L8.21826 13.5113L12.8053 8.46735H14.0909L18.6779 13.5113L17.3923 14.6283L14.3081 11.2369V19.6741H12.588V11.2369Z" fill="#20A748"/>
-                        <path d="M4.48271 19.6741V11.9549C4.48271 11.9549 2.44845 11.8778 1.12068 13.0577C0.477433 13.6293 0 14.5549 0 15.8145C0 17.0742 0.477433 17.9227 1.12068 18.4943C2.44845 19.6741 4.48271 19.6741 4.48271 19.6741Z" fill="white"/>
-                        <path d="M22.4138 11.9539L22.4138 19.673C22.4138 19.673 24.561 19.7502 25.9626 18.5703C26.6416 17.9986 27.1455 17.073 27.1455 15.8134C27.1455 14.5538 26.6416 13.7053 25.9626 13.1337C24.561 11.9538 22.4138 11.9539 22.4138 11.9539Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.08154 3.67897C7.11963 1.30479 10.6042 0 13.4479 0C16.2917 0 19.7762 1.30479 21.8143 3.67897C22.8669 4.90517 23.3194 6.33643 23.5139 7.83045C23.6712 9.03935 23.663 10.3312 23.6549 11.6086C23.6531 11.8908 23.6513 12.1723 23.6513 12.452H22.5176C22.5176 12.1544 22.5194 11.8609 22.5211 11.5713C22.5289 10.2979 22.5361 9.10156 22.3896 7.97635C22.2122 6.6134 21.8144 5.41851 20.9535 4.41566C19.1646 2.33174 16.0164 1.132 13.4479 1.132C10.8794 1.132 7.73124 2.33174 5.94231 4.41566C5.08143 5.41851 4.68363 6.6134 4.5062 7.97635C4.35973 9.10156 4.36697 10.2979 4.37468 11.5713C4.37644 11.8609 4.37821 12.1544 4.37821 12.452H3.2445C3.2445 12.1723 3.24271 11.8908 3.24092 11.6086C3.23279 10.3312 3.22458 9.03935 3.38195 7.83045C3.57643 6.33643 4.02891 4.90517 5.08154 3.67897Z" fill="white"/>
-                        </svg>
-                        </a><p>Conectar Audio</p></li>
+                <article class="content">
 
-                    <li><a><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M27.893 16.1687V2.47156C27.893 2.47156 24.3728 3.3679 22.0116 5.95489C21.4091 6.61508 21.1689 7.51838 21.1689 8.41977V10.5245C21.1689 11.2333 21.3085 11.9512 21.7298 12.5153C23.7598 15.2332 27.893 16.1687 27.893 16.1687Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23 2.2334L4.49994 20.7336L2.90625 19.1399L21.4063 0.639709L23 2.2334Z" fill="#FF5C5C"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.57761 17.1649H17.6671C18.913 17.1649 19.9231 16.1614 19.9231 14.9235V6.88657L9.57761 17.1649ZM18.1002 2.35816C17.3492 1.80355 16.4187 1.4754 15.4111 1.4754H3.00307C1.75712 1.4754 0.74707 2.47889 0.74707 3.71676V12.6822C0.74707 14.552 1.89938 16.1544 3.53696 16.8268L18.1002 2.35816Z" fill="white"/>
-                        </svg>                                                
-                        </a><p>Iniciar Video</p></li>
+                    <!-- Conect Audio -->
+                    <div class="conect">
 
-                    <li><a><svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 0C2.01472 0 0 2.08934 0 4.66667V16.3333C0 18.9107 2.01472 21 4.5 21H22.5C24.9853 21 27 18.9107 27 16.3333V4.66667C27 2.08934 24.9853 0 22.5 0H4.5ZM13.0098 5.83333H13.9883L14.5601 6.44085L18 10.0957L16.6197 11.5624L14.5601 9.37397V16.1143H12.6081V9.37397L10.3803 11.5604L9 10.0938L12.6081 6.26014L13.0098 5.83333Z" fill="#23D959"/>
-                        </svg>
-                        </a><p>Compartilhar Tela</p></li>
+                        <div class="header_name">
+                            <div class="tittle_name">
+                                <div class="logo"></div>
+                                <p>Conectar audio</p>
+                            </div>
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
 
-                    <li><a onclick="People.open()"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.4484 4.98078C13.4484 7.73159 11.2184 9.96157 8.4676 9.96157C5.71679 9.96157 3.48682 7.73159 3.48682 4.98078C3.48682 2.22997 5.71679 0 8.4676 0C11.2184 0 13.4484 2.22997 13.4484 4.98078Z" fill="white"/>
-                        <path d="M23.6587 7.22212C23.6587 9.42276 21.8747 11.2067 19.6741 11.2067C17.4734 11.2067 15.6895 9.42276 15.6895 7.22212C15.6895 5.02147 17.4734 3.23749 19.6741 3.23749C21.8747 3.23749 23.6587 5.02147 23.6587 7.22212Z" fill="white"/>
-                        <path d="M16.9347 16.8102C16.9347 20.1722 15.8057 20.1722 8.46733 20.1722C1.12898 20.1722 0 20.1722 0 16.8102C0 14.025 3.16744 11.2068 8.46733 11.2068C13.7672 11.2068 16.9347 14.025 16.9347 16.8102Z" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4365 20.0203C18.7385 19.7458 19.2086 17.9308 19.2086 16.8101C19.2086 15.8001 18.7902 14.7857 18.0031 13.903C18.836 13.6156 19.8104 13.4481 20.9093 13.4481C24.8125 13.4481 27.1452 15.5618 27.1452 17.6507C27.1452 20.1722 26.3137 20.1722 20.9093 20.1722C18.7908 20.1722 17.375 20.1722 16.4365 20.0203Z" fill="white"/>
-                        </svg>
-                        </a><p>Participantes</p></li>
+                        <div class="join">
+                            <h3 class="phone">Conectar por telefone</h3>
+                            <h3 class="wifi">Conectar por Wi-fi</h3>
+                        </div>
 
-                    <li><a><svg width="22" height="21" viewBox="0 0 22 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="2.64502" cy="2.5" r="2.5" fill="white"/>
-                        <circle cx="10.645" cy="2.5" r="2.5" fill="white"/>
-                        <circle cx="18.645" cy="2.5" r="2.5" fill="white"/>
-                        </svg>
-                        </a><p>Mais</p></li>
+                        <div class="alert">
+                            <a>Testar volume e microfone</a>
+                        </div>
 
-                    <li><button class="end" type="text">Sair</button></li>    
-                </ul>
-            </nav>
-        </div>
-    </article>
+                    </div>
+                    <!-- Conect Audio -->
+
+                    <!-- Video -->
+                    <div class="video_cast">
+                        <!-- <video id="video_capture" autoplay></video> -->
+                        <div id="video"></div>
+                        <div class="video_info">
+                            <div class="header_name">
+                                <div class="tittle_name">
+                                    <div class="logo"></div>
+                                    <p>Abrir Câmera</p>
+                                </div>
+                                <a class="close">
+                                    <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="catch_error">
+                                <h2 class="status_error"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video -->
+
+                    <!-- Participants -->
+                    <div class="participants">
+                        <div class="header_name">
+                            <div class="tittle_name">
+
+                                <div class="logo"></div>
+                                </svg><span>Participantes (1)</span>
+                            </div>
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="conteiner_name">
+                            <p class="logo_name">MN</p>
+                            <p class="name" id="name">Meu Nome</p>
+                        </div>
+
+                    </div>
+                    <!-- Participants -->
+
+                    <!-- Share Screen -->
+                    <div class="share">
+                        <div class="header_name">
+                            <div class="tittle_name">
+                                <div class="logo"></div>
+                                <p>Selecione uma janela ou aplicação para compartilhar</p>
+                            </div>
+
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="screen">
+                            <div class="header_options">
+                                <p class="opt Basic">Básico</p>
+                                <p class="opt Advanced">Avançado</p>
+                                <p class="opt Files">Pastas</p>
+                            </div>
+
+                            <div class="screen_options">
+                                <div class="option_1">
+                                    <figure class="browser">
+                                        <img src="/midia/browser.png" alt="Compartilhar tela do Navegador">
+                                        <figcaption>Compartilhar Navegador</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="option_2">
+                                    <figure class="whiteboard">
+                                        <img src="/midia/Whiteboard.png" alt="Quadro Branco">
+                                        <figcaption>Quadro Branco</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="option_3">
+                                    <figure class="iPhone">
+                                        <img src="/midia/Celular.png" alt="Celular">
+                                        <figcaption>iPhone/iPad</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="options_share">
+
+                            <div class="input_options">
+                                <div class="share_sound">
+                                    <input type="checkbox" name="Sound" id="Som" value="Compartilhar Audio">
+                                    <label for="Som">Compartilhar Audio</label>
+                                </div>
+
+                                <div class="optimize">
+                                    <input type="checkbox" name="Video" id="Video" value="Otimizar para Video">
+                                    <label for="Video">Otimizar para Video</label>
+                                </div>
+                            </div>
+
+                            <button class="share_button" type="button">Enviar</button>
+
+                        </div>
+                    </div>
+                    <!-- Share Screen -->
+
+                    
+                </article>
+
+                <nav class="options" id="buttons_options">
+                    <ul>
+                        <li class="CAD">
+                            <a><svg width="28" height="21" viewBox="0 0 28 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.588 11.2369L9.5039 14.6283L8.21826 13.5113L12.8053 8.46735H14.0909L18.6779 13.5113L17.3923 14.6283L14.3081 11.2369V19.6741H12.588V11.2369Z"
+                                        fill="#20A748" />
+                                    <path
+                                        d="M4.48271 19.6741V11.9549C4.48271 11.9549 2.44845 11.8778 1.12068 13.0577C0.477433 13.6293 0 14.5549 0 15.8145C0 17.0742 0.477433 17.9227 1.12068 18.4943C2.44845 19.6741 4.48271 19.6741 4.48271 19.6741Z"
+                                        fill="white" />
+                                    <path
+                                        d="M22.4138 11.9539L22.4138 19.673C22.4138 19.673 24.561 19.7502 25.9626 18.5703C26.6416 17.9986 27.1455 17.073 27.1455 15.8134C27.1455 14.5538 26.6416 13.7053 25.9626 13.1337C24.561 11.9538 22.4138 11.9539 22.4138 11.9539Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.08154 3.67897C7.11963 1.30479 10.6042 0 13.4479 0C16.2917 0 19.7762 1.30479 21.8143 3.67897C22.8669 4.90517 23.3194 6.33643 23.5139 7.83045C23.6712 9.03935 23.663 10.3312 23.6549 11.6086C23.6531 11.8908 23.6513 12.1723 23.6513 12.452H22.5176C22.5176 12.1544 22.5194 11.8609 22.5211 11.5713C22.5289 10.2979 22.5361 9.10156 22.3896 7.97635C22.2122 6.6134 21.8144 5.41851 20.9535 4.41566C19.1646 2.33174 16.0164 1.132 13.4479 1.132C10.8794 1.132 7.73124 2.33174 5.94231 4.41566C5.08143 5.41851 4.68363 6.6134 4.5062 7.97635C4.35973 9.10156 4.36697 10.2979 4.37468 11.5713C4.37644 11.8609 4.37821 12.1544 4.37821 12.452H3.2445C3.2445 12.1723 3.24271 11.8908 3.24092 11.6086C3.23279 10.3312 3.22458 9.03935 3.38195 7.83045C3.57643 6.33643 4.02891 4.90517 5.08154 3.67897Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <p>Conectar Audio</p>
+                        </li>
+
+                        <li class="IVI">
+                            <a><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27.893 16.1687V2.47156C27.893 2.47156 24.3728 3.3679 22.0116 5.95489C21.4091 6.61508 21.1689 7.51838 21.1689 8.41977V10.5245C21.1689 11.2333 21.3085 11.9512 21.7298 12.5153C23.7598 15.2332 27.893 16.1687 27.893 16.1687Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M23 2.2334L4.49994 20.7336L2.90625 19.1399L21.4063 0.639709L23 2.2334Z"
+                                        fill="#FF5C5C" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.57761 17.1649H17.6671C18.913 17.1649 19.9231 16.1614 19.9231 14.9235V6.88657L9.57761 17.1649ZM18.1002 2.35816C17.3492 1.80355 16.4187 1.4754 15.4111 1.4754H3.00307C1.75712 1.4754 0.74707 2.47889 0.74707 3.71676V12.6822C0.74707 14.552 1.89938 16.1544 3.53696 16.8268L18.1002 2.35816Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <p>Iniciar Video</p>
+                        </li>
+
+                        <li class="CTE">
+                            <a class="open"><svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.5 0C2.01472 0 0 2.08934 0 4.66667V16.3333C0 18.9107 2.01472 21 4.5 21H22.5C24.9853 21 27 18.9107 27 16.3333V4.66667C27 2.08934 24.9853 0 22.5 0H4.5ZM13.0098 5.83333H13.9883L14.5601 6.44085L18 10.0957L16.6197 11.5624L14.5601 9.37397V16.1143H12.6081V9.37397L10.3803 11.5604L9 10.0938L12.6081 6.26014L13.0098 5.83333Z"
+                                        fill="#23D959" />
+                                </svg>
+                            </a>
+                            <p>Compartilhar Tela</p>
+                        </li>
+
+                        <li class="PAR">
+                            <a class="open"><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.4484 4.98078C13.4484 7.73159 11.2184 9.96157 8.4676 9.96157C5.71679 9.96157 3.48682 7.73159 3.48682 4.98078C3.48682 2.22997 5.71679 0 8.4676 0C11.2184 0 13.4484 2.22997 13.4484 4.98078Z"
+                                        fill="white" />
+                                    <path
+                                        d="M23.6587 7.22212C23.6587 9.42276 21.8747 11.2067 19.6741 11.2067C17.4734 11.2067 15.6895 9.42276 15.6895 7.22212C15.6895 5.02147 17.4734 3.23749 19.6741 3.23749C21.8747 3.23749 23.6587 5.02147 23.6587 7.22212Z"
+                                        fill="white" />
+                                    <path
+                                        d="M16.9347 16.8102C16.9347 20.1722 15.8057 20.1722 8.46733 20.1722C1.12898 20.1722 0 20.1722 0 16.8102C0 14.025 3.16744 11.2068 8.46733 11.2068C13.7672 11.2068 16.9347 14.025 16.9347 16.8102Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.4365 20.0203C18.7385 19.7458 19.2086 17.9308 19.2086 16.8101C19.2086 15.8001 18.7902 14.7857 18.0031 13.903C18.836 13.6156 19.8104 13.4481 20.9093 13.4481C24.8125 13.4481 27.1452 15.5618 27.1452 17.6507C27.1452 20.1722 26.3137 20.1722 20.9093 20.1722C18.7908 20.1722 17.375 20.1722 16.4365 20.0203Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <p>Participantes</p>
+                        </li>
+
+                        <li class="MOR">
+                            <a><svg width="22" height="21" viewBox="0 0 22 5" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.64502" cy="2.5" r="2.5" fill="white" />
+                                    <circle cx="10.645" cy="2.5" r="2.5" fill="white" />
+                                    <circle cx="18.645" cy="2.5" r="2.5" fill="white" />
+                                </svg>
+                            </a>
+                            <p>Mais</p>
+                        </li>
+
+                        <li class="EN"><button class="end" type="text">Sair</button></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <iframe src="./cell.html" frameborder="0" width="100%" height="830px"></iframe>
+
+        </article>
 
         <!-- <article class="modais">
             <div class="audio">    
@@ -176,12 +394,15 @@
                 </ul>
             </nav>
         </article> -->
-        
+
     </section>
+
+
 
     <footer class="footer">
         <h2 class="footer_tittle">Nosso Objetivo</h2>
-        <p class="footer_description">Nosso objetivo é ajudar o maior número de pessoas a usarem do melhor modo possível o aplicativo zoom meetings!</p>
+        <p class="footer_description">Nosso objetivo é ajudar o maior número de pessoas a usarem do melhor modo possível
+            o aplicativo zoom meetings!</p>
         <small>Este não é um site oficial do zoom meetings</small>
 
         <article id="social_media">
@@ -189,5 +410,7 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script src="./cam.js"></script>
 </body>
+
 </html>

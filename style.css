@@ -21,6 +21,7 @@ main {
 
 a {
     cursor: pointer;
+    color: #0E71EB;
 }
 
 #main {
@@ -30,7 +31,7 @@ a {
 
 .tittle h1 {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 3rem;
     color: #0E71EB;
 
     padding: 0 0 20px;
@@ -39,7 +40,7 @@ a {
 .tittle p {
     font-weight: 400;
     max-width: 400px;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .line_text {
@@ -52,7 +53,7 @@ a {
 
 .tittle button {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 /* =====Fim do Main==== */
@@ -93,7 +94,7 @@ a {
     text-decoration: none;
 
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .nav_bar ul li a:hover {
@@ -102,7 +103,7 @@ a {
 }
 /* =====Fim da Nav Bar===== */
 #container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
 
@@ -116,7 +117,7 @@ a {
 
 #area_devices h2 {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 #options_devices {
@@ -142,13 +143,64 @@ a {
     text-align: center;
 
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
-/* #position {
-    display: flex;
-} */
+/* ===== Join ==== */
 
+/* ====logo==== */
+.logo {
+    background: no-repeat 0;
+    background-image: url(./midia/zoom-logo.png);
+    height: 30px;
+    width: 30px;
+}
+
+.conect {
+    max-width: 500px;
+    height: 200px;
+
+    background: #fff;
+    text-align: center;
+
+    display: none;
+}
+
+.join {
+    width: 100%;
+    height: 100px;
+}
+
+.conect .join {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.join h3 {
+    padding: 7px 15px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.phone:hover {
+    background: #EEEEF7;
+}
+
+.wifi:hover {
+    background: #EEEEF7;
+}
+
+.join {
+    padding: 5px;
+}
+/* ===== Join ==== */
+
+/* ==== position ==== */
 .prototipo_computer {
     width: 1200px;
     background-color: #1A1A1A;
@@ -161,7 +213,7 @@ a {
     margin: 10px;
     padding: 20px;
 
-    height: auto;
+    height: 500px;
     width: auto;
 
     background-color: #212122;
@@ -180,6 +232,8 @@ a {
 .header {
     background-color: #fff;
     color: #0E71EB;
+
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: center;
 
@@ -207,6 +261,7 @@ a {
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 #buttons_options {
@@ -233,7 +288,7 @@ a {
 }
 
 .options p {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #fff;
 
     padding: 5px;
@@ -248,32 +303,39 @@ a {
     color: #fff
 }
 
+/* Participantes */
 .participants {
-    width: 20rem;
-    height: 20rem;
+    width: 350px;
+    height: 300px;
 
     background: #fff;
     margin: 10px auto;
-    font-size: 14px;
+    font-size: 1.4rem;
 
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
+    display: none;
     z-index: 999;
 }
 
-.participants .tittle_name {
+.on .participants {
+    display: block;
+}
+
+.tittle_name {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.participants .header_name {
+.header_name {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 5px;
+    padding: 7px;
     background: #eee;
+    font-size: 1.4rem;
 }
 
 .participants .conteiner_name {
@@ -287,9 +349,8 @@ a {
     background: #27AE60;
     color: #fff;
 
-    height: 30px;
-    width: 30px;
-    padding: 7px 5px;
+
+    padding: 8px 5px;
 
     border-radius: 6px;
 }
@@ -360,24 +421,115 @@ footer {
 
 .footer_tittle {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 3rem;
+    line-height: 30px;
 
     margin: 5px;
 }
 
 .footer_description {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 23px;
 }
 
 small {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 20px;
     color: #1A1A1A;
 }
+
+/* ==== Share Screen ==== */
+.share {
+    display: none;
+}
+
+.on {
+    display: block;
+}
+
+.share_button {
+    padding: 5px 15px;
+    background: #0E71EB;
+    color: #fff;
+
+    border: none;
+    border-radius: 7px;
+
+}
+
+.screen {
+    height: 320px;
+}
+
+.screen, .share {
+    background: #fff;
+}
+
+.screen .screen_options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    text-align: center;
+}
+.screen_options .option_1,
+.screen_options .option_2,
+.screen_options .option_3 {
+    margin: 20px;
+    padding: 2px 5px 12px 12px;
+    border-radius: 10px;
+}
+
+.screen_options .option_1:hover,
+.screen_options .option_2:hover,
+.screen_options .option_3:hover {
+    background: #0E71EB;
+    color: #fff;
+}
+
+.header_options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+
+    height: 30px;
+    width: 350px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.opt {
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.74);
+    cursor: pointer;
+}
+
+.Basic {
+    color: #0E71EB;
+    background: #fff;
+    padding: 5px 20px;
+}
+
+.options_share {
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options_share .input_options {
+    display: flex;
+    gap: 20px;
+}
+/* ==== Share Screen ==== */
+
 
 @media (max-width: 1200px) {
     .prototipo_computer {
@@ -396,7 +548,8 @@ small {
 
 @media (max-width: 550px) {
     .prototipo_computer {
-        opacity: 0;
-        visibility: hidden;
+        /* opacity: 0;
+        visibility: hidden; */
+        display: none;
     }
 }
