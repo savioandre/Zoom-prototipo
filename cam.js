@@ -1,11 +1,16 @@
-/*function startVideo() {
+function startVideo() {
+    const MOD = {video: true, aspectRatio:16/9}
 
-    navigator.mediaDevices.getUserMedia({video:true}).then(stream=>{
+
+    navigator.mediaDevices.getUserMedia(MOD).then(stream=>{
 
         const videoElement = document.querySelector('#video')
-        videoElement.scrObject = stream
+        videoElement.srcObject = stream
 
-    }).catch(error=>{alert('Câmera não capturada')})
+    }).catch(error=>{
+        document.querySelector('.status_error')
+            .innerHTML = "Erro na Câmera " + error
+    })
 }
 
-window.addEventListener("DOMContentLoaded", startVideo)*/
+window.addEventListener("DOMContentLoaded", startVideo)

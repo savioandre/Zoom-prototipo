@@ -18,7 +18,7 @@ AUDIO.addEventListener('click', () => {
 })
 
 VIDEO.addEventListener('click', () => {
-  document.querySelector('.video_cast').classList.add('on')
+  document.querySelector('.video_info').classList.add('on')
 })
 
 SHARE_SCREEN.addEventListener('click', () => {
@@ -44,6 +44,10 @@ document.querySelector('.close').addEventListener('click', () => {
 
 document.querySelector('.share .close').addEventListener('click', () => {
   document.querySelector('.share').classList.remove('on')
+})
+
+document.querySelector('.video_info .close').addEventListener('click', () => {
+  document.querySelector('.video_info').classList.remove('on')
 })
 
 // Get Name
@@ -84,27 +88,60 @@ function userName() {
     userName();
   };
 
+// function start(ID) {
+//   const shield = document.querySelector(ID);
+//   if(shield) {
+//     shield.classList.add('active');
+//     shield.addEventListener('click', (e) => {
+//       if(e.target.id == ID || e.target.className == '') {
+//         shield.classList.remove('active')
+//       }
+//     });
+//   }
+// }
 
-  let active_bar = document.getElementById("select_button").classList.add("nav_bar_active");
-
-   active_bar.addEventListener("click", select);
-
-  //  function select() {
-  //    active_bar
-
-  //  }
-
-function start(ID) {
-  const shield = document.querySelector(ID);
-  if(shield) {
-    shield.classList.add('active');
-    shield.addEventListener('click', (e) => {
-      if(e.target.id == ID || e.target.className == '') {
-        shield.classList.remove('active')
-      }
-    });
-  }
+function shieldOpen() {
+  const SHIELD = document.querySelector('div.shield svg')
+  const BO_SH = document.querySelector('.meet.security')
+  SHIELD.addEventListener('click', () => {
+    BO_SH.classList.toggle('active')
+  })
 }
 
-const button = document.querySelector('.shield');
-button.addEventListener('click', () => ID(''))
+shieldOpen()
+
+// const button = document.querySelector('.shield');
+// button.addEventListener('click', () => ID(''))
+
+function InsertName() {
+  let init = prompt('Coloque seu Nome')
+  var name_ = init
+  let meet = document.querySelector('.value_name')
+  const COMPLETE = "Reunião de " + init
+
+  meet.innerHTML = COMPLETE
+
+  let name = document.querySelector('#name')
+  name.innerHTML = init
+
+  function FormatName() {
+    const FormatName = document.querySelector('.logo_name')
+    if(name_.includes(" ") === true) {
+      let first = name_.slice(0, 1)
+      let get_Les = name_.indexOf(" ")
+      let last = name_.slice(get_Les+1, get_Les+2)
+      let name_Formated = [first, last]
+
+      FormatName.innerHTML = name_Formated.join('')
+    } else {
+      // let nit = slice(1, undefined).toLowerCase()
+      let simple = name_.slice(0, 2)
+      FormatName.innerHTML = simple
+    }
+  }
+
+  FormatName()
+}
+
+InsertName()
+

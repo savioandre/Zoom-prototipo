@@ -104,7 +104,7 @@ a {
 /* =====Fim da Nav Bar===== */
 #container {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 
     background-color: #333360;
@@ -201,6 +201,10 @@ a {
 /* ===== Join ==== */
 
 /* ==== position ==== */
+article#position {
+    padding: 0 1%;
+}
+
 .prototipo_computer {
     width: 1200px;
     background-color: #1A1A1A;
@@ -209,9 +213,16 @@ a {
     border-radius: 10px;
 }
 
+.video_info {
+    width: calc(100vw - 9%);
+    max-width: 1140px;
+    margin: 0 auto;
+    display: none;
+}
+
 .content {
     margin: 10px;
-    padding: 20px;
+    padding: 10px 20px;
 
     height: 500px;
     width: auto;
@@ -253,6 +264,7 @@ a {
     padding: 5px;
     background-color: #212122;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .view {
@@ -355,6 +367,11 @@ a {
     border-radius: 6px;
 }
 
+.logo_name {
+    width: 32px;
+    text-align: center;
+}
+
 .participants_end {
     box-sizing: content-box;
     padding: 7px;
@@ -403,7 +420,7 @@ a {
     background: #0E71EB;
 }
 
-.active {
+.meet.security.active, .active {
     opacity: 1;
     visibility: visible;
     z-index: 1;
@@ -443,10 +460,19 @@ small {
 /* ==== Share Screen ==== */
 .share {
     display: none;
+    max-width: 1140px;
+    width: calc(100vw - 12%);
+}
+
+@media (max-width: 1220px) {
+    .share {
+        left: 5%;
+    }
 }
 
 .on {
     display: block;
+    position: absolute;
 }
 
 .share_button {
@@ -529,6 +555,29 @@ small {
     gap: 20px;
 }
 /* ==== Share Screen ==== */
+
+/* ==== Video ==== */
+.video_cast {
+    width: calc(100vw - 9%);
+}
+
+#video {
+    display: block;
+    margin: 0 auto;
+}
+
+#videod {
+    position: absolute;
+    width: calc(100%);
+    left: 0;
+}
+
+.catch_error {
+    background: #ffff;
+    padding: 12px;
+    text-align: center;
+    height: 200px;
+}
 
 
 @media (max-width: 1200px) {

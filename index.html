@@ -78,17 +78,18 @@
                 <article class="buttons">
                     <!-- Shield -->
                     <div class="shield_security">
-                        <a class="shield"><svg width="15" height="15" viewBox="0 0 15 14" fill="none"
+                        <div class="shield">
+                            <svg width="15" height="15" viewBox="0 0 15 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M13.6456 2.33333C11.2145 2.44422 8.83556 1.60734 7.01286 0C5.19016 1.60734 2.81124 2.44422 0.380125 2.33333C0.0261771 3.53346 -0.0821243 4.79225 0.0616566 6.03492C0.205438 7.27759 0.598367 8.47877 1.2171 9.56708C1.83582 10.6554 2.66772 11.6086 3.66336 12.3702C4.659 13.1317 5.79807 13.6859 7.01286 14C8.22766 13.6859 9.36672 13.1317 10.3624 12.3702C11.358 11.6086 12.1899 10.6554 12.8086 9.56708C13.4274 8.47877 13.8203 7.27759 13.9641 6.03492C14.1078 4.79225 13.9995 3.53346 13.6456 2.33333ZM9.90573 5.99438C10.2105 5.69063 10.2105 5.19817 9.90573 4.89443C9.60099 4.59069 9.10692 4.59069 8.80219 4.89443L6.23267 7.45557L5.2238 6.44999C4.91906 6.14625 4.42499 6.14625 4.12025 6.44999C3.81552 6.75373 3.81552 7.24619 4.12025 7.54993L5.6809 9.10549C5.98563 9.40923 6.4797 9.40923 6.78444 9.10549L9.90573 5.99438Z"
                                     fill="#23D959" />
                             </svg>
-                        </a>
+                        </div>
                     
                         <div class="meet security">
                             <div class="name_meet">
-                                <h3>Reunião de Sávio André</h3>
+                                <h3 class="value_name"></h3>
                             </div>
 
                             <div class="content_meet">
@@ -134,6 +135,34 @@
 
                 <article class="content">
 
+                    <!-- Video -->
+                    <div class="video_cast">
+                        <!-- <video id="video_capture" autoplay></video> -->
+                        <div id="videod">
+                            <video id="video" autoplay></video>
+                        </div>
+                        <div class="video_info">
+                            <div class="header_name">
+                                <div class="tittle_name">
+                                    <div class="logo"></div>
+                                    <p>Abrir Câmera</p>
+                                </div>
+                                <a class="close">
+                                    <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="catch_error">
+                                <h2 class="status_error"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video -->
+
                     <!-- Conect Audio -->
                     <div class="conect">
 
@@ -164,33 +193,6 @@
                     </div>
                     <!-- Conect Audio -->
 
-                    <!-- Video -->
-                    <div class="video_cast">
-                        <!-- <video id="video_capture" autoplay></video> -->
-                        <div id="video"></div>
-                        <div class="video_info">
-                            <div class="header_name">
-                                <div class="tittle_name">
-                                    <div class="logo"></div>
-                                    <p>Abrir Câmera</p>
-                                </div>
-                                <a class="close">
-                                    <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
-                                            fill="black" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="catch_error">
-                                <h2 class="status_error"></h2>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Video -->
-
                     <!-- Participants -->
                     <div class="participants">
                         <div class="header_name">
@@ -210,8 +212,8 @@
                         </div>
 
                         <div class="conteiner_name">
-                            <p class="logo_name">MN</p>
-                            <p class="name" id="name">Meu Nome</p>
+                            <p class="logo_name"></p>
+                            <p class="name" id="name"></p>
                         </div>
 
                     </div>
@@ -245,21 +247,21 @@
                             <div class="screen_options">
                                 <div class="option_1">
                                     <figure class="browser">
-                                        <img src="/midia/browser.png" alt="Compartilhar tela do Navegador">
+                                        <img src="./midia/browser.png" alt="Compartilhar tela do Navegador">
                                         <figcaption>Compartilhar Navegador</figcaption>
                                     </figure>
                                 </div>
 
                                 <div class="option_2">
                                     <figure class="whiteboard">
-                                        <img src="/midia/Whiteboard.png" alt="Quadro Branco">
+                                        <img src="./midia/Whiteboard.png" alt="Quadro Branco">
                                         <figcaption>Quadro Branco</figcaption>
                                     </figure>
                                 </div>
 
                                 <div class="option_3">
                                     <figure class="iPhone">
-                                        <img src="/midia/Celular.png" alt="Celular">
+                                        <img src="./midia/Celular.png" alt="Celular">
                                         <figcaption>iPhone/iPad</figcaption>
                                     </figure>
                                 </div>
@@ -411,6 +413,7 @@
 
     <script src="./script.js"></script>
     <script src="./cam.js"></script>
+    <script src="./Data.js"></script>
 </body>
 
 </html>
