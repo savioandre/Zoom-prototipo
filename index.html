@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./computer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;800&display=swap" rel="stylesheet">
     <title>Zoom teste</title>
 </head>
 
@@ -71,7 +76,7 @@
         </div>
 
         <article id="position">
-            <div class="prototipo_computer" onclick=" Bar.open()">
+            <div class="prototipo_computer">
 
                 <div class="header">Protótipo do Zoom</div>
 
@@ -118,7 +123,8 @@
                     </div>
                     <!-- Shield -->
 
-                    <a href="#" class="view"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                    <a href="#" class="view">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <circle cx="1.5" cy="1.5" r="1.5" fill="white" />
                             <circle cx="1.5" cy="5.5" r="1.5" fill="white" />
@@ -136,11 +142,11 @@
                 <article class="content">
 
                     <!-- Video -->
+                    <div class="videod">
+                        <video id="webcam" class="off" autoplay></video>
+                    </div>
+
                     <div class="video_cast">
-                        <!-- <video id="video_capture" autoplay></video> -->
-                        <div id="videod">
-                            <video id="video" autoplay></video>
-                        </div>
                         <div class="video_info">
                             <div class="header_name">
                                 <div class="tittle_name">
@@ -156,8 +162,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="catch_error">
-                                <h2 class="status_error"></h2>
+                            <div class="catch_error">   
                             </div>
                         </div>
                     </div>
@@ -211,9 +216,14 @@
                             </a>
                         </div>
 
-                        <div class="conteiner_name">
+                        <div class="container_name">
                             <p class="logo_name"></p>
                             <p class="name" id="name"></p>
+
+                            <div class="opt-end" style="opacity: 0;">
+                                <p class="mute">Mute</p>
+                                <p class="rename">Renomear</p>
+                            </div>
                         </div>
 
                     </div>
@@ -288,7 +298,36 @@
                     </div>
                     <!-- Share Screen -->
 
-                    
+                    <div class="get_name on" style="z-index: 1000;">
+                        <div class="header_name">
+                            <div class="tittle_name">
+
+                                <div class="logo"></div>
+                                </svg><span>Renomear</span>
+                            </div>
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="main_name">
+                            <label for="data-name">Coloque seu nome:</label>
+                            <input type="text" placeholder="Seu nome" id="data-name">
+                        </div>
+                        <div class="opt-out">
+                            <button class="ok">OK</button>
+                            <button class="cancel">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <div class="bac">
+                        <h1 class="back"></h1>
+                    </div>
                 </article>
 
                 <nav class="options" id="buttons_options">
@@ -414,6 +453,7 @@
     <script src="./script.js"></script>
     <script src="./cam.js"></script>
     <script src="./Data.js"></script>
+    <script src="./Methods.js"></script>
 </body>
 
 </html>

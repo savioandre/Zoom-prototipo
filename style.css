@@ -5,8 +5,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font: 'Roboto', sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font);
     background: #fff;
 }
 
@@ -214,20 +218,23 @@ article#position {
 }
 
 .video_info {
-    width: calc(100vw - 9%);
-    max-width: 1140px;
+    width: unset;
+    max-width: 500px;
     margin: 0 auto;
-    display: none;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin: 10px;
     padding: 10px 20px;
+    background-color: #212122;
 
     height: 500px;
     width: auto;
-
-    background-color: #212122;
 }
 
 .primary {
@@ -350,14 +357,14 @@ article#position {
     font-size: 1.4rem;
 }
 
-.participants .conteiner_name {
+.participants .container_name {
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.participants .conteiner_name .logo_name {
+.participants .container_name .logo_name {
     background: #27AE60;
     color: #fff;
 
@@ -389,7 +396,7 @@ article#position {
     border-radius: 5px;
 }
 
-.participants .conteiner_name #rename {
+.participants .container_name #rename {
     letter-spacing: 1px;
     text-align: center;
     border: 2px solid #0e72ec;
@@ -399,6 +406,25 @@ article#position {
     border-radius: 5px;
     padding: 3px 10px;
     display: inline-block;
+    cursor: pointer;
+}
+
+.opt-end {
+    display: flex;
+    gap: 8px;
+    justify-self: flex-end;
+    float: left;
+    position: absolute;
+    right: 22px;
+    opacity: 0;
+    transition: all 0.2ms ease-in-out;
+}
+
+p.mute, p.rename {
+    padding: 4px 8px;
+    background: #0f71eb;
+    border-radius: 6px;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -468,11 +494,6 @@ small {
     .share {
         left: 5%;
     }
-}
-
-.on {
-    display: block;
-    position: absolute;
 }
 
 .share_button {
@@ -559,11 +580,7 @@ small {
 /* ==== Video ==== */
 .video_cast {
     width: calc(100vw - 9%);
-}
-
-#video {
-    display: block;
-    margin: 0 auto;
+    display: none;
 }
 
 #videod {
@@ -572,13 +589,135 @@ small {
     left: 0;
 }
 
-.catch_error {
-    background: #ffff;
-    padding: 12px;
-    text-align: center;
-    height: 200px;
+#webcam {
+    display: block;
+    margin: 0 auto;
 }
 
+#webcam.off {
+    display: none;
+}
+
+.catch_error {
+    background: #ffff;
+    padding: 24px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+h2.status_error {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.catch_error p {
+    font-size: 14px;
+}
+
+/* NAME DATA*/
+.get_name {
+    display: none;
+    /* position: absolute; */
+    align-self: center;
+    width: 400px;
+}
+
+.main_name {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main_name label {
+    font-size: 14px;
+}
+
+.opt-out button {
+    width: 65px;
+    padding: 4px 0;
+    border-radius: 8px;
+}
+
+input#data-name {
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px solid #0e71eb;
+    outline: none;
+}
+
+button.ok {
+    border-radius: 8px;
+    border: 2px solid #0e71eb;
+    background: #0e71eb;
+    color: #fff;
+}
+
+button.ok:hover {
+    background: #0365dd;
+}
+
+button.cancel {
+    border: 2px solid;
+}
+
+.opt-out {
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+    background: #eee;
+}
+
+.on {
+    display: block;
+    position: absolute;
+}
+
+.bac {
+    position: absolute;
+}
+
+h1.back {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #f1f1f1;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: -1;
+}
+
+/* NAME DATA*/
+
+/* Db click */
+.db article#position {
+    padding: 0;
+}
+
+.db .prototipo_computer {
+    position: fixed; 
+    top: 0; 
+    bottom: 0;
+    width: -webkit-fill-available;
+    margin: 0;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.db .content {
+    height: 88%;
+}
+
+.videod, #webcam {
+    height: 100%;
+}
+/* Db click */
 
 @media (max-width: 1200px) {
     .prototipo_computer {
