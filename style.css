@@ -14,6 +14,10 @@ body {
     background: #fff;
 }
 
+body.RO {
+    overflow: hidden;
+}
+
 /* =====Main==== */
 main {
     display: flex;
@@ -172,17 +176,21 @@ a {
 
 .join {
     width: 100%;
-    height: 100px;
+    min-width: 500px;
 }
 
 .conect .join {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 10px;
 }
 
 .join h3 {
-    padding: 7px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
 
     cursor: pointer;
@@ -191,16 +199,16 @@ a {
     font-weight: 600;
 }
 
-.phone:hover {
+h3.phone:hover {
     background: #EEEEF7;
 }
 
-.wifi:hover {
-    background: #EEEEF7;
-}
+.erro_audio {
+    color: #dd9103;
+    font-size: 1.4rem;
 
-.join {
-    padding: 5px;
+    display: flex;
+    align-items: flex-start;
 }
 /* ===== Join ==== */
 
@@ -583,19 +591,24 @@ small {
     display: none;
 }
 
-#videod {
-    position: absolute;
-    width: calc(100%);
-    left: 0;
+.videod {
+    width: calc(100vw - 20% - 1rem);
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #webcam {
     display: block;
     margin: 0 auto;
+    z-index: 1000;
 }
 
 #webcam.off {
     display: none;
+    z-index: 0;
 }
 
 .catch_error {
@@ -702,6 +715,7 @@ h1.back {
     top: 0; 
     bottom: 0;
     width: -webkit-fill-available;
+    width: 100%;
     margin: 0;
     border-radius: 0;
 
@@ -714,9 +728,18 @@ h1.back {
     height: 88%;
 }
 
-.videod, #webcam {
-    height: 100%;
+@media (max-width: 904px) {
+    .videod {
+        width: 100%;
+        height: 100%;
+    }
+
+    #webcam {
+         width: 90%;
+         height: calc(100vh - 50%);
+     }
 }
+
 /* Db click */
 
 @media (max-width: 1200px) {

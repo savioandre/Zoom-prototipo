@@ -5,7 +5,7 @@ function seeOpt() {
                 .forEach((a) => {
                     a.style.opacity = 1
                 })
-    })
+        })
 
     document.querySelector('.container_name')
         .addEventListener('mouseout', () => {
@@ -13,33 +13,37 @@ function seeOpt() {
                 .forEach((a) => {
                     a.style.opacity = 0
                 })
-    })
+        })
 }
 seeOpt()
 
 function doB() {
+
     document.querySelector('body')
         .addEventListener('dblclick', () => {
             document.querySelector('#container')
                 .classList.toggle('db')
 
-            document.querySelector('body')
-                .style.overflow = "hidden"
+            document.querySelector('body').classList.toggle('RO')
         })
 }
 doB()
 
-document.querySelector('body').addEventListener('keypress', function(e) {
+document.addEventListener('keydown', (e) => {
+    var code = e.key
 
-    if(e.key === 'Enter') {
+    if (code === 'Enter') {
         const ok = document.querySelector('.ok')
         ok.click()
     }
 
-    else if(e.key === 'a' || e.location === 27) {
+    else if (code === 'Escape') {
         const cancel = document.querySelectorAll('.close')
         cancel.forEach((i) => {
             i.click()
         })
+
+        const act = document.querySelector('.meet.security')
+        act.classList.remove('active')
     }
 })
