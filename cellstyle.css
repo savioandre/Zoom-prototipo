@@ -135,8 +135,9 @@ small {
 
     z-index: 999;
 
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: 50px 78% 140px;
+    -ms-grid-rows: 50px 78% 140px;
     border-radius: 10px;
     display: none;
 }

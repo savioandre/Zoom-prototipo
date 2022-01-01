@@ -25,7 +25,9 @@ html {
 }
 
 .meet {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
 
     visibility: hidden;
@@ -50,4 +52,8 @@ html {
 
 .send_meet p, .received_meet p {
     padding: 7px 0;
+}
+
+.iframe {
+    width: 100%; height: 100%;
 }

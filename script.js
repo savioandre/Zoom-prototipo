@@ -4,19 +4,19 @@ function initFrame() {
   Bar.addEventListener('click', () => {
     document.querySelector(".options").classList.add("active")
   })
-  
+
 }
 
 function OpenModal() {
-  const AUDIO = document.querySelector('.CAD')
+  // const AUDIO = document.querySelector('.CAD')
   // const VIDEO = document.querySelector('.IVI')
   const SHARE_SCREEN = document.querySelector('.CTE')
   const PARTICIPANTS = document.querySelector('.PAR')
   const MORE = document.querySelector('.MOR')
   // ADD
-  AUDIO.addEventListener('click', () => {
-    document.querySelector('.conect').classList.add('on')
-  })
+  // AUDIO.addEventListener('click', () => {
+  //   document.querySelector('.conect').classList.add('on')
+  // })
 
   // VIDEO.addEventListener('click', () => {
   //   document.querySelector('.video_cast').classList.add('on')
@@ -130,7 +130,6 @@ function InsertName() {
 
         FormatName.innerHTML = name_Formated.join('')
       } else {
-        // let nit = slice(1, undefined).toLowerCase()
         let simple = name_.slice(0, 2)
         FormatName.innerHTML = simple
       }
@@ -139,6 +138,15 @@ function InsertName() {
     function insertBack() {
       const nameBack = document.querySelector('h1.back')
       nameBack.innerHTML = document.querySelector('#data-name').value
+      if (init.length >= 14) {
+        let na_end = name_.slice(0, 17)
+        const NA_END = `${na_end}...`
+        document.querySelector('#name').innerHTML = NA_END
+
+        let ba_end = name_.slice(0, 10)
+        const BA_END = `${ba_end}...`
+        document.querySelector('.back').innerHTML = BA_END
+      }
     }
 
     userName()
@@ -159,6 +167,7 @@ function RemoveTab() {
         document.querySelector('.get_name ').classList.remove('on')
       })
     })
+
   initFrame()
 }
 

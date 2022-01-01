@@ -1,0 +1,138 @@
+.mo_ide {
+    width: 100%;
+    /* height: 100%; */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.na_po {
+    background-color: #1e90ff;
+    color: #f1f1f1;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    padding: 12px;
+    /* width: 200px; */
+    min-width: 200px;
+    max-width: 500px;
+    width: max-content;
+    min-width: 200px;
+    animation: 2s ani_p infinite;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes ani_p {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+ul.ul_hlp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: 2s ul_hlp;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes ul_hlp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+.btn_hlp {
+    background-color: #1e90ff;
+    color: #f1f1f1;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    border: none;
+}
+
+.hlp_fo {
+    padding: 10px;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.btn_hlp:hover {
+    background-color: hsl(216, 100%, 53%);
+}
+
+.opt_hlp, .btn_hlp {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.opt_hlp:hover {
+    background: rgba(255, 255, 255, 0.2)
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+.nk {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    background: #0e72ec;
+    color: #f1f1f1;
+    border-radius: 50%;
+    left: 40px;
+    bottom: 80px;
+    padding: 1px 5px;
+    animation: 2s ani_p infinite;
+}
+
+/* Settings */
+.settings {
+    position: absolute;
+    background: #fff;
+    opacity: 0;
+    z-index: -1;
+}
+
+.settings #main_cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left_w {
+    width: 30%;
+    padding: 12px;
+}
+
+#rigth_w {
+    padding: 12px;
+}
+
+._set {
+    padding: 6px 12px;
+    color: #000;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+
+._set:hover, ._set:active {
+    background: blue;
+    color: #f1f1f1;
+}
+
+.video_ma {
+    background: #ccc;
+    border-radius: 10px;
+    height: 175px;
+    width: 300px;
+}
+/* Settings */

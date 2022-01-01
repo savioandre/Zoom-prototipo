@@ -32,6 +32,10 @@ a {
     color: #0E71EB;
 }
 
+li {
+    list-style: none;
+}
+
 #main {
     height: 50vh;
     overflow: hidden;
@@ -233,7 +237,6 @@ article#position {
 
 .content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -307,11 +310,18 @@ article#position {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 4px 0;
 }
 
 .options ul li {
-    list-style: none;
     text-align: center;
+    padding: 4px 6px;
+    cursor: pointer;
+}
+
+.options ul li:nth-child(-n+5):hover {
+    background: #303030;
+    border-radius: 10px;
 }
 
 .options p {
@@ -373,7 +383,7 @@ article#position {
 }
 
 .participants .container_name .logo_name {
-    background: #27AE60;
+    /* background: #27AE60; */
     color: #fff;
 
 
@@ -467,10 +477,13 @@ footer {
     padding: 20px;
     background: #0E71EB;
     color: #fff;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .footer_tittle {
+    text-align: center;
     font-weight: 500;
     font-size: 3rem;
     line-height: 30px;
@@ -482,6 +495,11 @@ footer {
     font-weight: 200;
     font-size: 1.8rem;
     line-height: 23px;
+}
+
+.ah_ {
+    color: #f1f1f1;
+    text-decoration: none;
 }
 
 small {
@@ -592,6 +610,7 @@ small {
 }
 
 .videod {
+    position: absolute;
     width: calc(100vw - 20% - 1rem);
     height: auto;
 
@@ -603,7 +622,7 @@ small {
 #webcam {
     display: block;
     margin: 0 auto;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 
 #webcam.off {
@@ -687,6 +706,7 @@ button.cancel {
 .on {
     display: block;
     position: absolute;
+    z-index: 1010;
 }
 
 .bac {
@@ -762,5 +782,55 @@ h1.back {
         /* opacity: 0;
         visibility: hidden; */
         display: none;
+    }
+}
+
+/* Teste */
+.at_one {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    height: 60px;
+    width: 200px;
+    background: #495eba;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.bt_at {
+    height: 10px;
+    width: 100%;
+    background: #566edd;
+    border-radius: 0px 0px 10px 10px;
+    animation-play-state: auto;
+    float: left;
+    animation: 3s ease-in an;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.re {
+    display: none;
+}
+
+@keyframes an {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 100%;
+    }
+}
+
+.ph_fr {
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .ph_fr {
+        display: block;
     }
 }

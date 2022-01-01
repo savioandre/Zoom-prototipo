@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./computer.css">
+    <link rel="stylesheet" href="./opt.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;800&display=swap" rel="stylesheet">
-    <title>Zoom teste</title>
+    <link rel="shortcut icon" href="./midia/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <title>Zoom - Protótipo</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -91,7 +95,7 @@
                                     fill="#23D959" />
                             </svg>
                         </div>
-                    
+
                         <div class="meet security">
                             <div class="name_meet">
                                 <h3 class="value_name"></h3>
@@ -124,8 +128,7 @@
                     <!-- Shield -->
 
                     <a href="#" class="view">
-                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="1.5" cy="1.5" r="1.5" fill="white" />
                             <circle cx="1.5" cy="5.5" r="1.5" fill="white" />
                             <circle cx="1.5" cy="9.5" r="1.5" fill="white" />
@@ -140,6 +143,12 @@
                 </article>
 
                 <article class="content">
+
+                    <section class="mo_ide">
+                        <div class="na_po" style="opacity: 0;">
+                            <!-- <p class="p_hlp">Coloque seu nome 👉</p> -->
+                        </div>
+                    </section>
 
                     <div class="bac">
                         <h1 class="back"></h1>
@@ -166,7 +175,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="catch_error">   
+                            <div class="catch_error">
                             </div>
                         </div>
                     </div>
@@ -301,7 +310,7 @@
                     </div>
                     <!-- Share Screen -->
 
-                    <div class="get_name on" style="z-index: 1000;">
+                    <div class="get_name on" style="z-index: 1011;">
                         <div class="header_name">
                             <div class="tittle_name">
 
@@ -328,28 +337,62 @@
                         </div>
                     </div>
 
+                    <!-- Manager -->
+                    <div class="settings on">
+                        <div class="header_name">
+                            <div class="tittle_name">
+                                <div class="logo"></div>
+                                <p>Configurações</p>
+                            </div>
+
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div id="main_cont">
+                            <div id="left_w" class="opt_set">
+                                <ul class="ul_opt_set">
+                                    <li class="_set" id="set_general">General</li>
+                                    <li class="_set" id="set_video">Video</li>
+                                    <li class="_set" id="set_audio">Audio</li>
+                                    <li class="_set" id="set_share">Share Screen</li>
+                                    <li class="_set" id="set_chat">Chat</li>
+                                    <li class="_set" id="set_back">Back</li>
+                                </ul>
+                            </div>
+
+                            <div id="rigth_w" class="main_set">
+                                <div class="video_ma"></div>
+                                <small>Câmera</small>
+                                <input type="checkbox" id="cam">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Manager -->
+
                 </article>
 
                 <nav class="options" id="buttons_options">
                     <ul>
                         <li class="CAD">
-                            <a><svg width="28" height="21" viewBox="0 0 28 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12.588 11.2369L9.5039 14.6283L8.21826 13.5113L12.8053 8.46735H14.0909L18.6779 13.5113L17.3923 14.6283L14.3081 11.2369V19.6741H12.588V11.2369Z"
-                                        fill="#20A748" />
-                                    <path
-                                        d="M4.48271 19.6741V11.9549C4.48271 11.9549 2.44845 11.8778 1.12068 13.0577C0.477433 13.6293 0 14.5549 0 15.8145C0 17.0742 0.477433 17.9227 1.12068 18.4943C2.44845 19.6741 4.48271 19.6741 4.48271 19.6741Z"
-                                        fill="white" />
-                                    <path
-                                        d="M22.4138 11.9539L22.4138 19.673C22.4138 19.673 24.561 19.7502 25.9626 18.5703C26.6416 17.9986 27.1455 17.073 27.1455 15.8134C27.1455 14.5538 26.6416 13.7053 25.9626 13.1337C24.561 11.9538 22.4138 11.9539 22.4138 11.9539Z"
-                                        fill="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M5.08154 3.67897C7.11963 1.30479 10.6042 0 13.4479 0C16.2917 0 19.7762 1.30479 21.8143 3.67897C22.8669 4.90517 23.3194 6.33643 23.5139 7.83045C23.6712 9.03935 23.663 10.3312 23.6549 11.6086C23.6531 11.8908 23.6513 12.1723 23.6513 12.452H22.5176C22.5176 12.1544 22.5194 11.8609 22.5211 11.5713C22.5289 10.2979 22.5361 9.10156 22.3896 7.97635C22.2122 6.6134 21.8144 5.41851 20.9535 4.41566C19.1646 2.33174 16.0164 1.132 13.4479 1.132C10.8794 1.132 7.73124 2.33174 5.94231 4.41566C5.08143 5.41851 4.68363 6.6134 4.5062 7.97635C4.35973 9.10156 4.36697 10.2979 4.37468 11.5713C4.37644 11.8609 4.37821 12.1544 4.37821 12.452H3.2445C3.2445 12.1723 3.24271 11.8908 3.24092 11.6086C3.23279 10.3312 3.22458 9.03935 3.38195 7.83045C3.57643 6.33643 4.02891 4.90517 5.08154 3.67897Z"
-                                        fill="white" />
-                                </svg>
+                            <svg width="19" height="22" viewBox="0 0 19 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.5421 12.2694C15.9328 12.2694 16.2535 12.5853 16.2109 12.9716C16.1442 13.5759 15.9917 14.169 15.7568 14.7329C15.4316 15.5139 14.9548 16.2236 14.3538 16.8214C13.7528 17.4191 13.0393 17.8933 12.2541 18.2168C11.8692 18.3754 11.4709 18.4962 11.0646 18.5782V19.9943H12.8674C13.294 19.9943 13.6399 20.2825 13.6399 20.638C13.6399 20.9936 13.294 21.2818 12.8674 21.2818H6.68748C6.26085 21.2818 5.91499 20.9936 5.91499 20.638C5.91499 20.2825 6.26085 19.9943 6.68748 19.9943H8.48966V18.5782C8.08349 18.4961 7.6852 18.3753 7.30045 18.2168C6.5152 17.8933 5.80171 17.4191 5.20071 16.8214C4.59971 16.2236 4.12297 15.5139 3.79771 14.7329C3.56288 14.169 3.41033 13.5759 3.34365 12.9716C3.30104 12.5853 3.62174 12.2694 4.01241 12.2694C4.40308 12.2694 4.71471 12.5859 4.76917 12.9707C4.82854 13.3901 4.94107 13.8014 5.10476 14.1944C5.35892 14.8047 5.73145 15.3593 6.20109 15.8264C6.67072 16.2935 7.22825 16.664 7.84185 16.9168C8.45545 17.1696 9.11311 17.2997 9.77726 17.2997C10.4414 17.2997 11.0991 17.1696 11.7127 16.9168C12.3263 16.664 12.8838 16.2935 13.3534 15.8264C13.8231 15.3593 14.1956 14.8047 14.4498 14.1944C14.6135 13.8014 14.726 13.3901 14.7854 12.9707C14.8398 12.5859 15.1514 12.2694 15.5421 12.2694Z"
+                                    fill="#C4C4C4" />
+                                <rect x="5.65283" y="0.28186" width="8.24875" height="15.7693" rx="4.12437"
+                                    fill="#C4C4C4" />
+                                <path class="no_on" d="M0.958984 19.6001L18.5955 1.96362" stroke="#E02828" />
+                            </svg>
+
                             </a>
-                            <p>Conectar Audio</p>
+                            <p id="mic_mt">Não Mudo</p>
                         </li>
 
                         <li class="IVI">
@@ -416,8 +459,11 @@
                 </nav>
             </div>
 
-            <iframe src="./cell.html" frameborder="0" width="100%" height="830px"></iframe>
+            <iframe src="./cell.html" class="ph_fr" name="Phone" frameborder="0" width="100%" height="830px"></iframe>
 
+            <div class="hlp_fo">
+                <button class="btn_hlp" type="button">Entrar no Modo de Ajuda 🆘</button>
+            </div>
         </article>
 
         <!-- <article class="modais">
@@ -441,9 +487,15 @@
 
 
     <footer class="footer">
-        <h2 class="footer_tittle">Nosso Objetivo</h2>
-        <p class="footer_description">Nosso objetivo é ajudar o maior número de pessoas a usarem do melhor modo possível
-            o aplicativo zoom meetings!</p>
+        <h2 class="footer_tittle">Obrigado por nos Visitar 👋</h2>
+        <p class="footer_description">
+            <span>👉</span>
+            <a href="https://github.com/savioandre/Zoom-prototipo" class="ah_" target="_blank">Repositório - Git Hub</a>
+        </p>
+        <p class="footer_description">
+            <span>👉</span>
+            <a href="https://zoom-prototipo.vercel.app/" class="ah_" target="_blank">Deploy</a>
+        </p>
         <small>Este não é um site oficial do zoom meetings</small>
 
         <article id="social_media">

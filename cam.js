@@ -22,9 +22,8 @@ function startVideo() {
             })
 
         const messageError = `
-            <h2 class="status_error">Zoom is unable to detect a camera</h2>
-            <p>Make sure that your camera is powered on and 
-            is connected to your computer</p>
+            <h2 class="status_error">Não foi possível detectar uma Câmera</h2>
+            <p>Certifique-se de que sua câmera está ligada e está conectada ao seu computador.</p>
         `
         document.querySelector('.catch_error')
             .innerHTML = messageError

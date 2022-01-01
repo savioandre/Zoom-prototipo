@@ -47,3 +47,126 @@ document.addEventListener('keydown', (e) => {
         act.classList.remove('active')
     }
 })
+
+function colorsUpName() {
+    let r = parseInt(Math.random() * 255);
+    let g = parseInt(Math.random() * 255);
+    let b = parseInt(Math.random() * 255);
+    const form_Back = `rgba(${r}, ${g}, ${b})`
+
+    const UPDT_B = document.querySelector('.logo_name')
+    UPDT_B.style.background = form_Back
+}
+colorsUpName()
+
+// function fisrtAgr() {
+
+//     const creatAttr = document.createElement('div')
+//     creatAttr.classList.add('at_one')
+
+//     const bar_and = document.createElement('div')
+//     bar_and.classList.add('bt_at')
+
+//     const nam = document.createElement('p')
+//     nam.innerHTML = 'Clique na Tela'
+
+//     document.querySelector('#position')
+//         .appendChild(creatAttr)
+
+//     document.querySelector('.at_one')
+//         .appendChild(nam)
+
+//     document.querySelector('.at_one')
+//         .appendChild(bar_and)
+
+//     setOut()
+
+// }
+// fisrtAgr()
+
+// function setOut() {
+
+//     setTimeout(() => {
+//         document.querySelector('.at_one')
+//             .classList.add('re')
+//     }, 3010)
+
+// }
+
+// function helpMode() {
+//     let btnInit = document.querySelector('.btn_hlp')
+//     const name_ = document.querySelector('#data-name').value
+//     if(name_.length = 0) {
+//         document.querySelector('.na_po')
+//             .style.opacity = 1
+//     }
+// }
+// helpMode()
+
+const InitHelp = {
+    InitHelp: document.querySelector(".btn_hlp").addEventListener('click', () => {
+
+        function openHelp() {
+            const IOH = document.querySelector('.na_po')
+            IOH.style.animation = "none"
+            IOH.style.opacity = 1
+
+            IOH.innerHTML = `
+                <ul class="ul_hlp">
+                    <h3>Selecione uma Opção:</h3>
+                
+                    <li class="opt_hlp un">Ligar Áudio</li>
+                    <li class="opt_hlp cm">Ligar Câmera</li>
+                    <li class="opt_hlp rm">Renomear</li>
+                </ul>`
+
+            audioHlp()
+            unmute()
+        }
+
+        function audioHlp() {
+            const IOH = document.querySelector('.un')
+            IOH.addEventListener('click', () => {
+
+                const MO_UL = document.querySelector('.na_po')
+                MO_UL.innerHTML = `
+                <ul class="ul_hlp">
+                  <h3>Ligar Áudio</h3>
+          
+                  <li class="opt_hlp l_on">1️⃣ Clique em <u>'Conectar Audio'</u></li>
+                  <li class="opt_hlp l_tw">2️⃣ Clique em <u>'Conectar por Audio do Dispositivo'</u></li>
+                  <li class="opt_hlp bk">🔙 Voltar</u></li>
+                </ul>
+                `
+            })
+        }
+
+        function unmute() {
+            document.querySelector('.un')
+                .addEventListener('click', () => {
+
+                    let nk = document.createElement('div')
+                    nk.classList.add('nk')
+                    nk.innerHTML = "1"
+
+                    const CAD = document.querySelector('.CAD')
+                    CAD.appendChild(nk)
+
+                    const li_one = document.querySelector('.l_on')
+                    li_one.addEventListener('click', (a) => {
+                        CAD.click()
+                    })
+
+                    const BK = document.querySelector('.bk')
+                    BK.addEventListener('click', () => {
+                        openHelp()
+                        let nka = document.querySelector('.nk')
+                        let reChild = CAD.removeChild(nka)
+                    })
+                })
+        }
+
+        openHelp()
+    })
+
+}
