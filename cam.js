@@ -1,6 +1,6 @@
 function startVideo() {
 
-    const MOD = { video: true }
+    const MOD = { video: true}
 
     navigator.mediaDevices.getUserMedia(MOD).then(stream => {
 

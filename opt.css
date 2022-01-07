@@ -1,10 +1,10 @@
 .mo_ide {
-    width: 100%;
-    /* height: 100%; */
-    z-index: 1000;
+    z-index: 1010;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: absolute;
+    left: 20px;
 }
 
 .na_po {
@@ -136,3 +136,7 @@ h3 {
     width: 300px;
 }
 /* Settings */
+.opt_n {
+    opacity: 0; 
+    appearance: none;
+}

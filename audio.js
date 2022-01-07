@@ -11,7 +11,23 @@ function audio() {
             const videoElement = document.querySelector('#webcam')
             videoElement.srcObject = stream
 
+            $('.CAD').click(function () {
+                if ($('#mic_mt').text() === 'Desligar Mudo') {
+                    $('#mic_mt').text('Ligar Mudo')
+                    $('.no_on').css('opacity', 0)
+                }
+                else if ($('#mic_mt').text() === 'Ligar Mudo') {
+                    $('#mic_mt').text('Desligar Mudo')
+                    $('.no_on').css('opacity', 1)
+                }
+            })
+
         }).catch(error => {
+            const AUDIO = document.querySelector('.CAD')
+            AUDIO.addEventListener('click', () => {
+                document.querySelector('.conect').classList.add('on')
+            })
+
             const ERRO_AUDIO = document.querySelector('.join')
             let messageAudio = `
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-triangle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -26,16 +42,6 @@ function audio() {
             LC.innerHTML = messageAudio
 
             ERRO_AUDIO.appendChild(LC)
-        })
-        $('#mic_mt').click(function() {
-            if($(this).text() === 'Não Mudo') {
-                $(this).text('Mudo')
-                $('.no_on').css('opacity', 0)
-            } 
-            else if ($(this).text() === 'Mudo') {
-                $(this).text('Não Mudo')
-                $('.no_on').css('opacity', 1)
-            }
         })
 }
 

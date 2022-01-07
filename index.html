@@ -200,11 +200,7 @@
                         </div>
 
                         <div class="join">
-                            <h3 class="phone">Conectar por Audio do Dispositivo</h3>
-                        </div>
-
-                        <div class="alert">
-                            <a>Testar volume e microfone</a>
+                            <h3 class="phone">Conectado por Audio do Dispositivo</h3>
                         </div>
 
                     </div>
@@ -267,26 +263,36 @@
                             </div>
 
                             <div class="screen_options">
-                                <div class="option_1">
-                                    <figure class="browser">
-                                        <img src="./midia/browser.png" alt="Compartilhar tela do Navegador">
-                                        <figcaption>Compartilhar Navegador</figcaption>
-                                    </figure>
-                                </div>
+                                <label for="opt_1">
+                                    <div class="option_1">
+                                        <figure class="browser">
+                                            <img src="./midia/browser.png" alt="Compartilhar tela do Navegador">
+                                            <figcaption>Compartilhar Navegador</figcaption>
+                                        </figure>
+                                    </div>
+                                </label>
+                                <input type="checkbox" name="opt_1" id="opt_1" class="opt_n">
 
+                                <label for="opt_2">
                                 <div class="option_2">
                                     <figure class="whiteboard">
                                         <img src="./midia/Whiteboard.png" alt="Quadro Branco">
                                         <figcaption>Quadro Branco</figcaption>
                                     </figure>
                                 </div>
+                                </label>
+                                <input type="checkbox" name="opt_2" id="opt_2" class="opt_n">
 
-                                <div class="option_3">
-                                    <figure class="iPhone">
-                                        <img src="./midia/Celular.png" alt="Celular">
-                                        <figcaption>iPhone/iPad</figcaption>
-                                    </figure>
-                                </div>
+                                <label for="opt_3">
+                                    <div class="option_3">
+                                        <figure class="iPhone">
+                                            <img src="./midia/Celular.png" alt="Celular">
+                                            <figcaption>iPhone/iPad</figcaption>
+                                        </figure>
+                                    </div>
+                                </label>
+                                <input type="checkbox" name="opt_3" id="opt_3" class="opt_n">
+
                             </div>
                         </div>
 
@@ -309,6 +315,47 @@
                         </div>
                     </div>
                     <!-- Share Screen -->
+
+                    <!-- Chat -->
+                    <div class="chat">
+                        <div class="header_name">
+                            <div class="tittle_name">
+                                <div class="logo"></div>
+                                <p>Bate-papo</p>
+                            </div>
+
+                            <a class="close">
+                                <svg class="participants_end" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="screen">
+                            <div class="main_msg">
+                                <div class="_sd">
+                                    <p class="logo_name"></p>
+                                    <div class="sen_" style="gap: 16px"></div>
+                                </div>
+                            </div>
+                            <div class="footer_ms">
+                                <div class="inf">
+                                    <p class="inf_p">Quem pode ver suas mensagens?</p>
+                                </div>
+                                <div class="sel_en">
+                                    <span>Para:</span>
+                                    <select name="select" id="sl_en">
+                                        <option selected value="Todos">Todos</option>
+                                    </select>
+                                </div>
+                                <input type="text" title="Tap Enter para enviar" id="msg"
+                                    placeholder="Digite a mensagen aqui...">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat -->
 
                     <div class="get_name on" style="z-index: 1011;">
                         <div class="header_name">
@@ -390,13 +437,11 @@
                                     fill="#C4C4C4" />
                                 <path class="no_on" d="M0.958984 19.6001L18.5955 1.96362" stroke="#E02828" />
                             </svg>
-
-                            </a>
-                            <p id="mic_mt">Não Mudo</p>
+                            <p id="mic_mt">Desligar Mudo</p>
                         </li>
 
                         <li class="IVI">
-                            <a><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                            <svg width="28" height="21" viewBox="0 0 28 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M27.893 16.1687V2.47156C27.893 2.47156 24.3728 3.3679 22.0116 5.95489C21.4091 6.61508 21.1689 7.51838 21.1689 8.41977V10.5245C21.1689 11.2333 21.3085 11.9512 21.7298 12.5153C23.7598 15.2332 27.893 16.1687 27.893 16.1687Z"
@@ -408,23 +453,31 @@
                                         d="M9.57761 17.1649H17.6671C18.913 17.1649 19.9231 16.1614 19.9231 14.9235V6.88657L9.57761 17.1649ZM18.1002 2.35816C17.3492 1.80355 16.4187 1.4754 15.4111 1.4754H3.00307C1.75712 1.4754 0.74707 2.47889 0.74707 3.71676V12.6822C0.74707 14.552 1.89938 16.1544 3.53696 16.8268L18.1002 2.35816Z"
                                         fill="white" />
                                 </svg>
-                            </a>
                             <p>Iniciar Video</p>
                         </li>
 
+                        <li class="CHT">
+                            <svg width="28" height="25" viewBox="0 0 28 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.48291 6.06277C0.48291 3.1132 2.90057 0.722107 5.88291 0.722107H22.0829C25.0652 0.722107 27.4829 3.1132 27.4829 6.06277V14.0738C27.4829 17.0233 25.0652 19.4144 22.0829 19.4144H12.6329L5.88291 24.7551V19.4144V19.4144C2.90057 19.4144 0.48291 17.0233 0.48291 14.0738V6.06277Z"
+                                    fill="white"></path>
+                            </svg>
+                            <p>Bate-Papo</p>
+                        </li>
+
                         <li class="CTE">
-                            <a class="open"><svg width="27" height="21" viewBox="0 0 27 21" fill="none"
+                            <svg width="27" height="21" viewBox="0 0 27 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M4.5 0C2.01472 0 0 2.08934 0 4.66667V16.3333C0 18.9107 2.01472 21 4.5 21H22.5C24.9853 21 27 18.9107 27 16.3333V4.66667C27 2.08934 24.9853 0 22.5 0H4.5ZM13.0098 5.83333H13.9883L14.5601 6.44085L18 10.0957L16.6197 11.5624L14.5601 9.37397V16.1143H12.6081V9.37397L10.3803 11.5604L9 10.0938L12.6081 6.26014L13.0098 5.83333Z"
                                         fill="#23D959" />
                                 </svg>
-                            </a>
                             <p>Compartilhar Tela</p>
                         </li>
 
                         <li class="PAR">
-                            <a class="open"><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                            <svg width="28" height="21" viewBox="0 0 28 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M13.4484 4.98078C13.4484 7.73159 11.2184 9.96157 8.4676 9.96157C5.71679 9.96157 3.48682 7.73159 3.48682 4.98078C3.48682 2.22997 5.71679 0 8.4676 0C11.2184 0 13.4484 2.22997 13.4484 4.98078Z"
@@ -439,18 +492,16 @@
                                         d="M16.4365 20.0203C18.7385 19.7458 19.2086 17.9308 19.2086 16.8101C19.2086 15.8001 18.7902 14.7857 18.0031 13.903C18.836 13.6156 19.8104 13.4481 20.9093 13.4481C24.8125 13.4481 27.1452 15.5618 27.1452 17.6507C27.1452 20.1722 26.3137 20.1722 20.9093 20.1722C18.7908 20.1722 17.375 20.1722 16.4365 20.0203Z"
                                         fill="white" />
                                 </svg>
-                            </a>
                             <p>Participantes</p>
                         </li>
 
                         <li class="MOR">
-                            <a><svg width="22" height="21" viewBox="0 0 22 5" fill="none"
+                            <svg width="22" height="21" viewBox="0 0 22 5" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.64502" cy="2.5" r="2.5" fill="white" />
                                     <circle cx="10.645" cy="2.5" r="2.5" fill="white" />
                                     <circle cx="18.645" cy="2.5" r="2.5" fill="white" />
-                                </svg>
-                            </a>
+                                </svg>                            
                             <p>Mais</p>
                         </li>
 

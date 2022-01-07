@@ -13,6 +13,7 @@ function OpenModal() {
   const SHARE_SCREEN = document.querySelector('.CTE')
   const PARTICIPANTS = document.querySelector('.PAR')
   const MORE = document.querySelector('.MOR')
+  const CHAT = document.querySelector('.CHT')
   // ADD
   // AUDIO.addEventListener('click', () => {
   //   document.querySelector('.conect').classList.add('on')
@@ -21,6 +22,9 @@ function OpenModal() {
   // VIDEO.addEventListener('click', () => {
   //   document.querySelector('.video_cast').classList.add('on')
   // })
+  CHAT.addEventListener('click', () => {
+    document.querySelector('.chat').classList.add('on')
+  })
 
   SHARE_SCREEN.addEventListener('click', () => {
     document.querySelector('.share').classList.add('on')
@@ -42,6 +46,10 @@ function closeModal() {
 
   document.querySelector('.close').addEventListener('click', () => {
     document.querySelector('.participants').classList.remove('on')
+  })
+
+  document.querySelector('.chat .close').addEventListener('click', () => {
+    document.querySelector('.chat').classList.remove('on')
   })
 
   document.querySelector('.share .close').addEventListener('click', () => {
@@ -121,17 +129,21 @@ function InsertName() {
     }
 
     function formatName() {
-      const FormatName = document.querySelector('.logo_name')
+      const FormatName = document.querySelectorAll('.logo_name')
       if (name_.includes(" ") === true) {
         let first = name_.slice(0, 1)
         let get_Les = name_.indexOf(" ")
         let last = name_.slice(get_Les + 1, get_Les + 2)
         let name_Formated = [first, last]
 
-        FormatName.innerHTML = name_Formated.join('')
+        FormatName.forEach((i) => {
+          i.innerHTML = name_Formated.join('')
+        })
       } else {
         let simple = name_.slice(0, 2)
-        FormatName.innerHTML = simple
+        FormatName.forEach((i) => {
+          i.innerHTML = simple
+        })
       }
     }
 

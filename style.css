@@ -49,6 +49,11 @@ li {
     padding: 0 0 20px;
 }
 
+footer, .catch_error, .main_name, .chat .screen, .sen_ {
+    display: flex;
+    flex-direction: column;
+}
+
 .tittle p {
     font-weight: 400;
     max-width: 400px;
@@ -174,8 +179,6 @@ li {
 
     background: #fff;
     text-align: center;
-
-    display: none;
 }
 
 .join {
@@ -340,6 +343,10 @@ article#position {
     color: #fff
 }
 
+.chat, .re, .at_one, .get_name, .video_cast, .share, .participants, .conect {
+    display: none;
+}
+
 /* Participantes */
 .participants {
     width: 350px;
@@ -348,10 +355,6 @@ article#position {
     background: #fff;
     margin: 10px auto;
     font-size: 1.4rem;
-
-    /* visibility: hidden;
-    opacity: 0; */
-    display: none;
     z-index: 999;
 }
 
@@ -382,18 +385,16 @@ article#position {
     gap: 15px;
 }
 
-.participants .container_name .logo_name {
-    /* background: #27AE60; */
-    color: #fff;
-
-
-    padding: 8px 5px;
-
+.logo_name {
+    padding: 7px 0;
+    width: 32px;
+    height: 32px;
     border-radius: 6px;
 }
 
-.logo_name {
-    width: 32px;
+p.logo_name {
+    font-size: 1.4rem;
+    color: #fff;
     text-align: center;
 }
 
@@ -477,8 +478,6 @@ footer {
     padding: 20px;
     background: #0E71EB;
     color: #fff;
-    display: flex;
-    flex-direction: column;
     gap: 8px;
 }
 
@@ -511,7 +510,6 @@ small {
 
 /* ==== Share Screen ==== */
 .share {
-    display: none;
     max-width: 1140px;
     width: calc(100vw - 12%);
 }
@@ -524,7 +522,7 @@ small {
 
 .share_button {
     padding: 5px 15px;
-    background: #0E71EB;
+    background: #0e71eb;
     color: #fff;
 
     border: none;
@@ -606,11 +604,9 @@ small {
 /* ==== Video ==== */
 .video_cast {
     width: calc(100vw - 9%);
-    display: none;
 }
 
 .videod {
-    position: absolute;
     width: calc(100vw - 20% - 1rem);
     height: auto;
 
@@ -634,8 +630,6 @@ small {
     background: #ffff;
     padding: 24px;
     height: 200px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
@@ -651,7 +645,6 @@ h2.status_error {
 
 /* NAME DATA*/
 .get_name {
-    display: none;
     /* position: absolute; */
     align-self: center;
     width: 400px;
@@ -660,8 +653,6 @@ h2.status_error {
 .main_name {
     background: #fff;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
     gap: 8px;
 }
 
@@ -689,7 +680,7 @@ button.ok {
     color: #fff;
 }
 
-button.ok:hover {
+button.ok:hover, .share_button:hover {
     background: #0365dd;
 }
 
@@ -787,7 +778,6 @@ h1.back {
 
 /* Teste */
 .at_one {
-    display: none;
     position: fixed;
     right: 10px;
     top: 10px;
@@ -812,10 +802,6 @@ h1.back {
     align-self: flex-end;
 }
 
-.re {
-    display: none;
-}
-
 @keyframes an {
     from { 
         width: 0;
@@ -833,4 +819,74 @@ h1.back {
     .ph_fr {
         display: block;
     }
+}
+
+/* Chat */
+.chat {
+    position: absolute;
+    min-height: 400px;
+    min-width: 400px;
+}
+
+.chat .screen {
+    width: 100%;
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.main_msg {
+    height: 65%;
+    overflow-y: auto;
+}
+
+.footer_ms {
+    height: 35%;
+    background: #fff;
+}
+
+.sel_en {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+}
+
+.sel_en span, .inf_p, .msn {
+    font-size: 1.4rem;
+}
+
+select {
+    padding: 2px;
+    background: #eee;
+    border: none;
+    outline: none;
+}
+
+input#msg {
+    border: none;
+    width: 100%;
+    height: inherit;
+    padding: 8px 0;
+    outline: none;
+}
+
+.inf_p {
+    text-align: center;
+    color: #858585;
+    padding: 8px 0;
+}
+
+._sd {
+    display: flex;
+    gap: 8px;
+}
+
+.msn {
+    padding: 8px;
+    background: #e6ffff;
+    border-radius: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    overflow-wrap: break-word;
 }

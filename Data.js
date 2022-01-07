@@ -18,5 +18,26 @@ function numberPassRandom() {
     SRA.innerHTML = randomPass
 }
 
+function msn() {
+    $('.ok').click(() => {
+        let na = document.querySelector('#data-name').value
+        let val = document.querySelector('#msg').value
+
+        document.addEventListener('keypress', (e) => {
+            let key = e.key
+            if(key === 'Enter' && val.length >= 1) {
+                const ms_send = document.querySelector('.sen_')
+                const Creat_MSG = document.createElement('p')
+                Creat_MSG.classList.add('msn')
+                Creat_MSG.innerHTML = val
+                ms_send.appendChild(Creat_MSG)
+                val = ''
+                $('#msg').val('')
+            }
+        })
+    })
+}
+
 numberIdRandom()
 numberPassRandom()
+msn()

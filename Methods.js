@@ -54,8 +54,10 @@ function colorsUpName() {
     let b = parseInt(Math.random() * 255);
     const form_Back = `rgba(${r}, ${g}, ${b})`
 
-    const UPDT_B = document.querySelector('.logo_name')
-    UPDT_B.style.background = form_Back
+    const UPDT_B = document.querySelectorAll('.logo_name')
+    UPDT_B.forEach((c) => {
+        c.style.background = form_Back
+    })
 }
 colorsUpName()
 
@@ -118,6 +120,7 @@ const InitHelp = {
                     <li class="opt_hlp un">Ligar Áudio</li>
                     <li class="opt_hlp cm">Ligar Câmera</li>
                     <li class="opt_hlp rm">Renomear</li>
+                    <li class="opt_hlp ct">Enviar Mensagem</li>
                 </ul>`
 
             audioHlp()
@@ -170,3 +173,38 @@ const InitHelp = {
     })
 
 }
+
+function copy() {
+    // copyInvite = document.querySelector('.invite_meet'),
+    let name_ = document.querySelector('#name').value
+    let id_ = document.querySelector('.id_meet').value
+    let password_ = document.querySelector('.pass_meet').value
+
+    function getValues() {
+        let a = `${name_} está convidando você;<br>
+        Id da reunião: ${id_}<br>
+        Senha da reunião: ${password_}<br>`
+
+        document.querySelector('.invite_meet')
+            .addEventListener('click', () => {
+                console.log(a)
+            })
+    }
+    getValues()
+}
+
+function screenRec() {
+    document.querySelector('.share_button')
+        .addEventListener('click', () => {
+            stream = navigator.mediaDevices.getDisplayMedia({
+                video: {
+                    mediaSource: "screen"
+                }
+
+            })
+
+            document.querySelector('.share .close')
+                .click()
+        })
+}
+screenRec()
