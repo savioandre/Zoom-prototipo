@@ -140,3 +140,11 @@ h3 {
     opacity: 0; 
     appearance: none;
 }
+.new_user {
+    width: 400px;
+}
+
+img.up {
+    border-radius:10px;
+    background-color: #f1f1f1;
+}

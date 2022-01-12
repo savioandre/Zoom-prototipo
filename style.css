@@ -386,10 +386,10 @@ article#position {
 }
 
 .logo_name {
-    padding: 7px 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
+    padding: 11px 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
 }
 
 p.logo_name {
@@ -666,7 +666,7 @@ h2.status_error {
     border-radius: 8px;
 }
 
-input#data-name {
+input[type="text"] {
     padding: 6px;
     border-radius: 10px;
     border: 2px solid #0e71eb;

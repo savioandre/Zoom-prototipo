@@ -49,14 +49,44 @@ document.addEventListener('keydown', (e) => {
 })
 
 function colorsUpName() {
-    let r = parseInt(Math.random() * 255);
-    let g = parseInt(Math.random() * 255);
-    let b = parseInt(Math.random() * 255);
-    const form_Back = `rgba(${r}, ${g}, ${b})`
+    // let r = parseInt(Math.random() * 255);
+    // let g = parseInt(Math.random() * 255);
+    // let b = parseInt(Math.random() * 255);
+    // const form_Back = `rgba(${r}, ${g}, ${b})`
+
+    document.querySelector('.data-name').addEventListener('keyup', () => {
+    let s_Alter = document.querySelector('.data-name').value
+    let color
+
+    if(s_Alter.match(/[a-d]+/) || s_Alter.match(/[A-D]+/)) {
+        color = 'rgb(240, 166, 36)'
+    }
+    else if (s_Alter.match(/[e-h]+/) || s_Alter.match(/[E-F]+/)) {
+        color = 'rgb(35, 205, 111)'
+    }
+    else if (s_Alter.match(/[g-j]+/) || s_Alter.match(/[G-J]+/)) {
+        color = 'rgb(230, 31, 26)'
+    }
+    else if (s_Alter.match(/[k-n]+/) || s_Alter.match(/[K-N]+/)) {
+        color = 'rgb(178, 218, 229)'
+    }
+    else if (s_Alter.match(/[o-t]+/) || s_Alter.match(/[O-T]+/)) {
+        color = 'rgb(231, 9, 220)'
+    }
+    else if (s_Alter.match(/[u-z]+/) || s_Alter.match(/[U-Z]+/)) {
+        color = 'rgb(173, 204, 8)'
+    }
+    else if (s_Alter.match(/[0-9]+/)){
+        color = 'rgb(155, 83, 48)'
+    }
+    else {
+        color = '#0E71EB'
+    }
 
     const UPDT_B = document.querySelectorAll('.logo_name')
     UPDT_B.forEach((c) => {
-        c.style.background = form_Back
+        c.style.background = color
+    })
     })
 }
 colorsUpName()
@@ -193,18 +223,20 @@ function copy() {
     getValues()
 }
 
-function screenRec() {
+function screenShare() {
     document.querySelector('.share_button')
         .addEventListener('click', () => {
             stream = navigator.mediaDevices.getDisplayMedia({
                 video: {
                     mediaSource: "screen"
                 }
-
             })
+
+            // let blob = new Blob([texto], { type: "video/mpeg;charset=utf-8" });
+            // saveAs(blob, titulo + ".mpeg");
 
             document.querySelector('.share .close')
                 .click()
         })
 }
-screenRec()
+screenShare()
