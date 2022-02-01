@@ -1,19 +1,21 @@
 function seeOpt() {
-    document.querySelector('.container_name')
-        .addEventListener('mouseover', () => {
-            document.querySelectorAll('.opt-end, .rename')
+    document.querySelectorAll('.container_name').forEach((i) => {
+        i.addEventListener('mouseover', () => {
+            document.querySelectorAll('.opt-end')
                 .forEach((a) => {
                     a.style.opacity = 1
                 })
         })
+    })
 
-    document.querySelector('.container_name')
-        .addEventListener('mouseout', () => {
-            document.querySelectorAll('.opt-end, .rename')
+    document.querySelectorAll('.container_name').forEach((i) => {
+        i.addEventListener('mouseout', () => {
+            document.querySelectorAll('.opt-end')
                 .forEach((a) => {
                     a.style.opacity = 0
                 })
         })
+    })
 }
 seeOpt()
 
@@ -49,109 +51,67 @@ document.addEventListener('keydown', (e) => {
 })
 
 function colorsUpName() {
-    // let r = parseInt(Math.random() * 255);
-    // let g = parseInt(Math.random() * 255);
-    // let b = parseInt(Math.random() * 255);
-    // const form_Back = `rgba(${r}, ${g}, ${b})`
 
     document.querySelector('.data-name').addEventListener('keyup', () => {
-    let s_Alter = document.querySelector('.data-name').value
-    let color
+        let s_Alter = document.querySelector('.data-name').value
+        let color
 
-    if(s_Alter.match(/[a-d]+/) || s_Alter.match(/[A-D]+/)) {
-        color = 'rgb(240, 166, 36)'
-    }
-    else if (s_Alter.match(/[e-h]+/) || s_Alter.match(/[E-F]+/)) {
-        color = 'rgb(35, 205, 111)'
-    }
-    else if (s_Alter.match(/[g-j]+/) || s_Alter.match(/[G-J]+/)) {
-        color = 'rgb(230, 31, 26)'
-    }
-    else if (s_Alter.match(/[k-n]+/) || s_Alter.match(/[K-N]+/)) {
-        color = 'rgb(178, 218, 229)'
-    }
-    else if (s_Alter.match(/[o-t]+/) || s_Alter.match(/[O-T]+/)) {
-        color = 'rgb(231, 9, 220)'
-    }
-    else if (s_Alter.match(/[u-z]+/) || s_Alter.match(/[U-Z]+/)) {
-        color = 'rgb(173, 204, 8)'
-    }
-    else if (s_Alter.match(/[0-9]+/)){
-        color = 'rgb(155, 83, 48)'
-    }
-    else {
-        color = '#0E71EB'
-    }
+        if (s_Alter.match(/[a-d]+/) || s_Alter.match(/[A-D]+/)) {
+            color = 'rgb(240, 166, 36)'
+        }
+        else if (s_Alter.match(/[e-h]+/) || s_Alter.match(/[E-F]+/)) {
+            color = 'rgb(35, 205, 111)'
+        }
+        else if (s_Alter.match(/[g-j]+/) || s_Alter.match(/[G-J]+/)) {
+            color = 'rgb(230, 31, 26)'
+        }
+        else if (s_Alter.match(/[k-n]+/) || s_Alter.match(/[K-N]+/)) {
+            color = 'rgb(178, 218, 229)'
+        }
+        else if (s_Alter.match(/[o-t]+/) || s_Alter.match(/[O-T]+/)) {
+            color = 'rgb(231, 9, 220)'
+        }
+        else if (s_Alter.match(/[u-z]+/) || s_Alter.match(/[U-Z]+/)) {
+            color = 'rgb(173, 204, 8)'
+        }
+        else if (s_Alter.match(/[0-9]+/)) {
+            color = 'rgb(155, 83, 48)'
+        }
+        else {
+            color = '#0E71EB'
+        }
 
-    const UPDT_B = document.querySelectorAll('.logo_name')
-    UPDT_B.forEach((c) => {
-        c.style.background = color
+
+        const UPDT_B = document.querySelectorAll('.logo_name')
+        UPDT_B.forEach((c) => {
+            c.style.background = color
+        })
+
     })
-    })
+
 }
-colorsUpName()
-
-// function fisrtAgr() {
-
-//     const creatAttr = document.createElement('div')
-//     creatAttr.classList.add('at_one')
-
-//     const bar_and = document.createElement('div')
-//     bar_and.classList.add('bt_at')
-
-//     const nam = document.createElement('p')
-//     nam.innerHTML = 'Clique na Tela'
-
-//     document.querySelector('#position')
-//         .appendChild(creatAttr)
-
-//     document.querySelector('.at_one')
-//         .appendChild(nam)
-
-//     document.querySelector('.at_one')
-//         .appendChild(bar_and)
-
-//     setOut()
-
-// }
-// fisrtAgr()
-
-// function setOut() {
-
-//     setTimeout(() => {
-//         document.querySelector('.at_one')
-//             .classList.add('re')
-//     }, 3010)
-
-// }
-
-// function helpMode() {
-//     let btnInit = document.querySelector('.btn_hlp')
-//     const name_ = document.querySelector('#data-name').value
-//     if(name_.length = 0) {
-//         document.querySelector('.na_po')
-//             .style.opacity = 1
-//     }
-// }
-// helpMode()
 
 const InitHelp = {
     InitHelp: document.querySelector(".btn_hlp").addEventListener('click', () => {
+        const IOH = document.querySelector('.na_po')
 
         function openHelp() {
-            const IOH = document.querySelector('.na_po')
             IOH.style.animation = "none"
             IOH.style.opacity = 1
 
             IOH.innerHTML = `
                 <ul class="ul_hlp">
-                    <h3>Selecione uma Opção:</h3>
+                    <div class="he_opt">
+                        <h3>Selecione uma Opção:</h3>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 6L0.646446 10.6464L1.35355 11.3536L6 6.70711L10.6464 11.3536L11.3536 10.6464L6.70711 6L11.3536 1.35355L10.6464 0.646447L6 5.29289L1.35355 0.646447L0.646447 1.35355L5.29289 6Z" fill="white"></path></svg>
+                    </div>
                 
                     <li class="opt_hlp un">Ligar Áudio</li>
                     <li class="opt_hlp cm">Ligar Câmera</li>
                     <li class="opt_hlp rm">Renomear</li>
                     <li class="opt_hlp ct">Enviar Mensagem</li>
-                </ul>`
+                </ul>
+                `
 
             audioHlp()
             unmute()
@@ -166,8 +126,9 @@ const InitHelp = {
                 <ul class="ul_hlp">
                   <h3>Ligar Áudio</h3>
           
-                  <li class="opt_hlp l_on">1️⃣ Clique em <u>'Conectar Audio'</u></li>
-                  <li class="opt_hlp l_tw">2️⃣ Clique em <u>'Conectar por Audio do Dispositivo'</u></li>
+                  <li class="opt_hlp ">⚠ Você precisa ter um microfone conectado</li>
+                  <li class="opt_hlp l_on">1️⃣ Clique em <u>'Desligar Mudo'</u> para ativar o microfone</li>
+                  <li class="opt_hlp l_tw">2️⃣ Clique em <u>'Ativar Mudo'</u> para desativar o microfone</li>
                   <li class="opt_hlp bk">🔙 Voltar</u></li>
                 </ul>
                 `
@@ -199,7 +160,14 @@ const InitHelp = {
                 })
         }
 
+        function closeHelp() {
+            document.querySelector('.he_opt svg').addEventListener('click', () => {
+                IOH.style.opacity = 0
+            })
+        }
+
         openHelp()
+        closeHelp()
     })
 
 }
@@ -232,11 +200,8 @@ function screenShare() {
                 }
             })
 
-            // let blob = new Blob([texto], { type: "video/mpeg;charset=utf-8" });
-            // saveAs(blob, titulo + ".mpeg");
-
-            document.querySelector('.share .close')
-                .click()
+            document.querySelector('.share .close').click()
         })
 }
 screenShare()
+colorsUpName()

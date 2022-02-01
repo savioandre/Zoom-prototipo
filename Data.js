@@ -75,6 +75,25 @@ function InsertName() {
         })
     }
 
+    function formatName() {
+      const FormatName = document.querySelectorAll('.logo_name')
+      if (name_.includes(" ") === true) {
+        let first = name_.slice(0, 1)
+        let get_Les = name_.indexOf(" ")
+        let last = name_.slice(get_Les + 1, get_Les + 2)
+        let name_Formated = [first, last]
+    
+        FormatName.forEach((i) => {
+          i.innerHTML = name_Formated.join('')
+        })
+      } else {
+        let simple = name_.slice(0, 2)
+        FormatName.forEach((i) => {
+          i.innerHTML = simple
+        })
+      }
+    }
+
     function insertBack() {
       const nameBack = document.querySelector('h1.back')
       nameBack.innerHTML = document.querySelector('#data-name').value
@@ -89,43 +108,12 @@ function InsertName() {
       }
     }
 
+    formatName()
     userName()
     insertBack()
   })
 
 }
-
-function formatName() {
-  const FormatName = document.querySelectorAll('.logo_name')
-  let edt_Name = document.getElementsByClassName('.data-name').value
-
-  const ok = document.querySelectorAll('.ok')
-  ok.forEach((a) => {
-    a.addEventListener('click', () => {
-
-      edt_Name.forEach((i) => {
-        let opr = i
-
-        if (opr.includes(" ")) {
-          let first = opr.slice(0, 1)
-          let get_Les = opr.indexOf(" ")
-          let last = opr.slice(get_Les + 1, get_Les + 2)
-          let name_Formated = [first, last]
-
-          FormatName.forEach((i) => {
-            i.innerHTML = name_Formated.join('')
-          })
-        } else {
-          let simple = opr.slice(0, 2)
-          FormatName.forEach((i) => {
-            i.innerHTML = simple
-          })
-        }
-      })
-    })
-  })
-}
-formatName()
 
 function RemoveTab() {
   var localName = document.querySelector('.get_name')
@@ -141,60 +129,6 @@ function RemoveTab() {
   initFrame()
 }
 
-function newPart() {
-
-  function img() {
-    document.querySelector('input[type="file"]').addEventListener('change', function () {
-      let img = document.querySelectorAll('img.up')
-      img.forEach((i) => {
-        // i.onload = () => {
-        //   URL.revokeObjectURL(i.src)
-        // }
-
-        i.src = URL.createObjectURL(this.files[0])
-      })
-    })
-  }
-  img()
-
-  let qnt = 1
-
-  document.querySelector('.new_').addEventListener('click', () => {
-    let new_Na = document.querySelector('#new_name').value
-    let plce = document.querySelector('.participants')
-    const CN_P = document.createElement('div')
-
-    if (new_Na.length >= 1) {
-      let newP = `
-        <!-- <img src="" class="up" width="40px" height="40px" title="Imagem de ${new_Na}" alt=""Img> -->
-            <p class="logo_name">${new_Na}</p>
-            <p class="name" id="name">${new_Na}</p>
-
-            <div class="opt-end" style="opacity: 0;">
-                <p class="mute">Mute</p>
-                <p class="rename" style="opacity: 0;">Renomear</p>
-            </div>
-        `
-      let creatOpt = document.createElement('option')
-      creatOpt.innerHTML = new_Na
-      document.querySelector('#sl_en').appendChild(creatOpt)
-
-      CN_P.classList.add('container_name')
-      CN_P.innerHTML = newP
-      plce.appendChild(CN_P)
-
-      qnt++
-      document.querySelector('.participants span').innerHTML = `Participantes (${qnt.toString()})`
-
-    } else {
-      document.querySelector('input#new_name')
-        .style.border = "2px solid red"
-    }
-  })
-
-}
-
-newPart()
 numberIdRandom()
 numberPassRandom()
 msn()

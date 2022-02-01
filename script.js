@@ -8,20 +8,11 @@ function initFrame() {
 }
 
 function OpenModal() {
-  // const AUDIO = document.querySelector('.CAD')
-  // const VIDEO = document.querySelector('.IVI')
   const SHARE_SCREEN = document.querySelector('.CTE')
   const PARTICIPANTS = document.querySelector('.PAR')
   const MORE = document.querySelector('.MOR')
   const CHAT = document.querySelector('.CHT')
-  // ADD
-  // AUDIO.addEventListener('click', () => {
-  //   document.querySelector('.conect').classList.add('on')
-  // })
 
-  // VIDEO.addEventListener('click', () => {
-  //   document.querySelector('.video_cast').classList.add('on')
-  // })
   CHAT.addEventListener('click', () => {
     document.querySelector('.chat').classList.add('on')
   })
@@ -55,10 +46,6 @@ function closeModal() {
   document.querySelector('.share .close').addEventListener('click', () => {
     document.querySelector('.share').classList.remove('on')
   })
-
-  // document.querySelector('.video_cast .close').addEventListener('click', () => {
-  //   document.querySelector('.video_cast').classList.remove('on')
-  // })
 }
 
 function shieldOpen() {
